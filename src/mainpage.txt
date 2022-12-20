@@ -1,0 +1,10 @@
+'mainpage.txt
+/**
+         @mainpage M_regex Fortran Library
+
+         @section Introduction
+
+    [M_regex - Fortran interface to POSIX 1003.2 regular expression library
+
+         @image html html/images/sort.gif
+*/'
