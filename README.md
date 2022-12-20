@@ -74,6 +74,24 @@ program that exercise the routine.
  This is a modified version of the Fortran wiki
  entry [regex_module](https://fortranwiki.org/fortran/show/regex_module)
 
+## SEE ALSO 
+
+o https://github.com/sage-git/regex-fortran
+o https://github.com/urbanjost/M_match 
+o https://github.com/ZedThree/fortran_pcre 
+o https://github.com/brocolis/fpm-search 
+o https://github.com/interkosmos/fortran-unix 
+o https://github.com/urbanjost/general-purpose-fortran 
+o https://github.com/vmagnin/gtk-fortran/blob/gtk3/examples/regex.f90 
+o https://swtch.com/~rsc/regexp/ 
+o https://fortran-lang.discourse.group/t/regular-expressions-regex-and-fortran/778 
+o https://github.com/search?q=fortran+regex 
+
+o http://www.pcre.org/ 
+o https://developer.gnome.org/glib/stable/glib-Perl-compatible-regular-expressions.html 
+o https://en.wikipedia.org/wiki/GLib 
+o https://en.wikipedia.org/wiki/Regular_expression 
+
 ## REFERENCES ![-](docs/images/ref.gif)
 
    * [Wikipedia](https://en.wikipedia.org/wiki/Regular_expression)
