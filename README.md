@@ -6,7 +6,7 @@ It adds man-pages and an fpm(1) interface and a unit test.
 
 Volunteers to extend it are welcome
 
-## ![M_regex](docs/images/id.gif)
+## ![M_regex](docs/images/regex.gif)
 
 
 ## BUILDING THE MODULE USING make(1) ![gmake](docs/images/gnu.gif)
