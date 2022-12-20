@@ -1,6 +1,11 @@
 
 This is a Fortran interface to the POSIX 1003.2 regular expression
 library using ISO_C_BINDING based on the example in the Fortran wiki.
+
+It adds man-pages and an fpm(1) interface and a unit test.
+
+Volunteers to extend it are welcome
+
 ## ![M_regex](docs/images/id.gif)
 
 
@@ -32,8 +37,6 @@ program that exercise the routine.
    ```bash
         git clone https://github.com/urbanjost/M_regex.git
         cd M_regex
-        fpm run "*"
-        fpm run --example "*"
         fpm test
    ```
 
@@ -53,7 +56,6 @@ program that exercise the routine.
 
    - a simple index to the man-pages in HTML form for the
    [routines](https://urbanjost.github.io/M_regex/man3.html) 
-   and [programs](https://urbanjost.github.io/M_regex/man1.html) 
 
    - There are man-pages in the repository download in the docs/ directory
      that may be installed on ULS (Unix-Like Systems).
