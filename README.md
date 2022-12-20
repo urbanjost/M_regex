@@ -76,21 +76,21 @@ program that exercise the routine.
 
 ## SEE ALSO 
 
-o https://github.com/sage-git/regex-fortran
-o https://github.com/urbanjost/M_match 
-o https://github.com/ZedThree/fortran_pcre 
-o https://github.com/brocolis/fpm-search 
-o https://github.com/interkosmos/fortran-unix 
-o https://github.com/urbanjost/general-purpose-fortran 
-o https://github.com/vmagnin/gtk-fortran/blob/gtk3/examples/regex.f90 
-o https://swtch.com/~rsc/regexp/ 
-o https://fortran-lang.discourse.group/t/regular-expressions-regex-and-fortran/778 
-o https://github.com/search?q=fortran+regex 
-
-o http://www.pcre.org/ 
-o https://developer.gnome.org/glib/stable/glib-Perl-compatible-regular-expressions.html 
-o https://en.wikipedia.org/wiki/GLib 
-o https://en.wikipedia.org/wiki/Regular_expression 
+   - https://github.com/sage-git/regex-fortran
+   - https://github.com/urbanjost/M_match 
+   - https://github.com/ZedThree/fortran_pcre 
+   - https://github.com/brocolis/fpm-search 
+   - https://github.com/interkosmos/fortran-unix 
+   - https://github.com/urbanjost/general-purpose-fortran 
+   - https://github.com/vmagnin/gtk-fortran/blob/gtk3/examples/regex.f90 
+   - https://swtch.com/~rsc/regexp/ 
+   - https://fortran-lang.discourse.group/t/regular-expressions-regex-and-fortran/778 
+   - https://github.com/search?q=fortran+regex 
+   
+   - http://www.pcre.org/ 
+   - https://developer.gnome.org/glib/stable/glib-Perl-compatible-regular-expressions.html 
+   - https://en.wikipedia.org/wiki/GLib 
+   - https://en.wikipedia.org/wiki/Regular_expression 
 
 ## REFERENCES ![-](docs/images/ref.gif)
 
