@@ -79,7 +79,6 @@ program that exercise the routine.
    - https://github.com/sage-git/regex-fortran
    - https://github.com/urbanjost/M_match 
    - https://github.com/ZedThree/fortran_pcre 
-   - https://github.com/brocolis/fpm-search 
    - https://github.com/interkosmos/fortran-unix 
    - https://github.com/urbanjost/general-purpose-fortran 
    - https://github.com/vmagnin/gtk-fortran/blob/gtk3/examples/regex.f90 
