@@ -53,13 +53,10 @@ program that exercise the routine.
    - A single page that uses javascript to combine all the HTML
      descriptions of the man-pages is at 
      [BOOK_M_regex](https://urbanjost.github.io/M_regex/BOOK_M_regex.html).
-
    - a simple index to the man-pages in HTML form for the
    [routines](https://urbanjost.github.io/M_regex/man3.html) 
-
    - There are man-pages in the repository download in the docs/ directory
      that may be installed on ULS (Unix-Like Systems).
-
    - ![man-pages](docs/images/manpages.gif)
       + [manpages.zip](https://urbanjost.github.io/M_regex/manpages.zip)
       + [manpages.tgz](https://urbanjost.github.io/M_regex/manpages.tgz)
@@ -76,7 +73,7 @@ program that exercise the routine.
 ## PEDIGREE
 
  This is a modified version of the Fortran wiki
- entry[regex_module](https://fortranwiki.org/fortran/show/regex_module)
+ entry [regex_module](https://fortranwiki.org/fortran/show/regex_module)
 
 ## REFERENCES ![-](docs/images/ref.gif)
 
