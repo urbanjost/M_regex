@@ -10,11 +10,11 @@ It adds man-pages and an fpm(1) interface and a unit test.
 
 Volunteers to extend it are welcome
 
-
 ---
 ![-](docs/images/gnu.gif)
 ---
 ## BUILDING THE MODULE USING make(1) 
+```bash
      git clone https://github.com/urbanjost/M_regex.git
      cd M_regex/src
      # change Makefile if not using one of the listed compilers
@@ -30,7 +30,7 @@ Volunteers to extend it are welcome
      # for nvfortran
      make clean
      make F90=nvfortran nvfortran
-
+```
 This will compile the Fortran module and basic example
 program that exercise the routine.
 
@@ -42,11 +42,11 @@ program that exercise the routine.
    Alternatively, download the github repository and build it with
    fpm ( as described at [Fortran Package Manager](https://github.com/fortran-lang/fpm) )
 
-   ```bash
+```bash
         git clone https://github.com/urbanjost/M_regex.git
         cd M_regex
         fpm test
-   ```
+```
 
    or just list it as a dependency in your fpm.toml project file.
 
@@ -65,7 +65,7 @@ program that exercise the routine.
      descriptions of the man-pages is at 
      [BOOK_M_regex](https://urbanjost.github.io/M_regex/BOOK_M_regex.html).
    - a simple index to the man-pages in HTML form for the
-   [routines](https://urbanjost.github.io/M_regex/man3.html) 
+     [routines](https://urbanjost.github.io/M_regex/man3.html) 
    - There are man-pages in the repository download in the docs/ directory
      that may be installed on ULS (Unix-Like Systems).
    - ![man-pages](docs/images/manpages.gif)
