@@ -1,4 +1,7 @@
-## ![M_regex](docs/images/regex.gif)
+---
+![M_regex](docs/images/regex.gif)
+---
+## Fortran interface to C POSIX regular expressions
 
 This is a Fortran interface to the POSIX 1003.2 regular expression
 library using ISO_C_BINDING based on the example in the Fortran wiki.
@@ -8,7 +11,10 @@ It adds man-pages and an fpm(1) interface and a unit test.
 Volunteers to extend it are welcome
 
 
-## BUILDING THE MODULE USING make(1) ![gmake](docs/images/gnu.gif)
+---
+![-](docs/images/gnu.gif)
+---
+## BUILDING THE MODULE USING make(1) 
      git clone https://github.com/urbanjost/M_regex.git
      cd M_regex/src
      # change Makefile if not using one of the listed compilers
@@ -28,7 +34,10 @@ Volunteers to extend it are welcome
 This will compile the Fortran module and basic example
 program that exercise the routine.
 
-## BUILD and TEST with FPM ![-](docs/images/fpm_logo.gif)
+---
+![-](docs/images/fpm_logo.gif)
+---
+## BUILD and TEST with FPM
 
    Alternatively, download the github repository and build it with
    fpm ( as described at [Fortran Package Manager](https://github.com/fortran-lang/fpm) )
@@ -46,7 +55,10 @@ program that exercise the routine.
         M_regex        = { git = "https://github.com/urbanjost/M_regex.git" }
 ```
 
-## DOCUMENTATION   ![docs](docs/images/docs.gif)
+---
+![-](docs/images/docs.gif)
+---
+## DOCUMENTATION
 
 ### USER
    - A single page that uses javascript to combine all the HTML
@@ -64,10 +76,10 @@ program that exercise the routine.
 
 ### DEVELOPER
    - [ford(1) output](https://urbanjost.github.io/M_regex/fpm-ford/index.html).
+   - [github action status](docs/STATUS.md) 
 <!--
    - [doxygen(1) output](https://urbanjost.github.io/M_regex/doxygen_out/html/index.html).
 -->
-   - [github action status](docs/STATUS.md) 
 ---
 ## PEDIGREE
 
@@ -89,9 +101,11 @@ program that exercise the routine.
    - http://www.pcre.org/ 
    - https://developer.gnome.org/glib/stable/glib-Perl-compatible-regular-expressions.html 
    - https://en.wikipedia.org/wiki/GLib 
-   - https://en.wikipedia.org/wiki/Regular_expression 
 
-## REFERENCES ![-](docs/images/ref.gif)
+---
+![-](docs/images/ref.gif)
+---
+## REFERENCES
 
-   * [Wikipedia](https://en.wikipedia.org/wiki/Regular_expression)
+   - [Wikipedia](https://en.wikipedia.org/wiki/Regular_expression)
 ---

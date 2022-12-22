@@ -1,0 +1,171 @@
+<html>
+<head>
+<title></title>
+<style>
+body {xfont-style: italic}
+body {
+background-color:#FFF; color:#333; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:1em; line-height:1.3em; }
+a:visited { color:#666; }
+h1,h2,h3,h4,h5,h6 { color:#333; font-family:georgia, verdana, sans-serif; }
+h1 { font-size:200%; }
+h2 { font-size:173%; }
+h3 { font-size:144%; }
+h4 { font-size:120%; }
+h5,h6 { font-size:100% }
+a.nav,a:link.nav, a:visited.nav { background-color:#FFF; color:#000; }
+table { border:double #000; border-collapse:collapse; }
+td { border:thin solid #888; }
+li { margin-bottom:0.5em; }
+blockquote { display:block; font-size:90%; font-style:italic; line-height:1.5em; margin:0 0 1.5em; padding:0 2.5em; }
+pre { background-color:#DDD; font-size:90%; overflow:auto; padding:1em; }
+a,li span { color:#000; }
+a:hover, a.nav:hover, a:hover math { background-color:#000; color:#FFF; }
+#Container { margin:0 10px; text-align:center; }
+#Content { border-top:none; margin:auto; padding:0.3em; text-align:left; width:100%; max-width:55em; }
+span.webName { font-size:.5em; }
+textarea#content { font-size: 1em; line-height: 1.125em; }
+h1#pageName { line-height:1.4em; margin:0.2em 0 0.2em 0; padding:0; }
+h2{ line-height:1.2em; margin:0.2em 0 0.2em 0; padding:0; color:blue;}
+.property { color:#666; font-size:80%; }
+a.existingWikiWord[title]{ //border: 1px dashed #BBB; }
+.byline { color:#666; font-size:.8em; font-style:italic; margin-bottom:1em; padding-top:1px; }
+</style>
+</head>
+<body>
+<div id="Container">
+<div id="Content">
+<hr />
+
+<h2><img src="docs/images/regex.gif" alt="M_regex" title="" /></h2>
+
+<h2>Fortran interface to C POSIX regular expressions</h2>
+
+<p>This is a Fortran interface to the POSIX 1003.2 regular expression
+library using ISO<em>C</em>BINDING based on the example in the Fortran wiki.</p>
+
+<p>It adds man-pages and an fpm(1) interface and a unit test.</p>
+
+<p>Volunteers to extend it are welcome</p>
+
+<hr />
+
+<h2><img src="docs/images/gnu.gif" alt="-" title="" /></h2>
+
+<h2>BUILDING THE MODULE USING make(1)</h2>
+
+<pre><code> git clone https://github.com/urbanjost/M_regex.git
+ cd M_regex/src
+ # change Makefile if not using one of the listed compilers
+
+ # for gfortran
+ make clean
+ make F90=gfortran gfortran
+
+ # for ifort
+ make clean
+ make F90=ifort ifort
+
+ # for nvfortran
+ make clean
+ make F90=nvfortran nvfortran
+</code></pre>
+
+<p>This will compile the Fortran module and basic example
+program that exercise the routine.</p>
+
+<hr />
+
+<h2><img src="docs/images/fpm_logo.gif" alt="-" title="" /></h2>
+
+<h2>BUILD and TEST with FPM</h2>
+
+<p>Alternatively, download the github repository and build it with
+   fpm ( as described at <a href="https://github.com/fortran-lang/fpm">Fortran Package Manager</a> )</p>
+
+<p><code>bash
+        git clone https://github.com/urbanjost/M_regex.git
+        cd M_regex
+        fpm test
+</code></p>
+
+<p>or just list it as a dependency in your fpm.toml project file.</p>
+
+<p><code>toml
+        [dependencies]
+        M_regex        = { git = "https://github.com/urbanjost/M_regex.git" }
+</code></p>
+
+<hr />
+
+<h2><img src="docs/images/docs.gif" alt="-" title="" /></h2>
+
+<h2>DOCUMENTATION</h2>
+
+<h3>USER</h3>
+
+<ul>
+<li>A single page that uses javascript to combine all the HTML
+ descriptions of the man-pages is at 
+ <a href="https://urbanjost.github.io/M_regex/BOOK_M_regex.html">BOOK<em>M</em>regex</a>.</li>
+<li>a simple index to the man-pages in HTML form for the
+<a href="https://urbanjost.github.io/M_regex/man3.html">routines</a> </li>
+<li>There are man-pages in the repository download in the docs/ directory
+ that may be installed on ULS (Unix-Like Systems).</li>
+<li><p><img src="docs/images/manpages.gif" alt="man-pages" title="" /></p>
+
+<ul>
+<li><a href="https://urbanjost.github.io/M_regex/manpages.zip">manpages.zip</a></li>
+<li><a href="https://urbanjost.github.io/M_regex/manpages.tgz">manpages.tgz</a></li>
+</ul></li>
+<li><p><a href="docs/CHANGELOG.md">CHANGELOG</a> provides a history of significant changes</p></li>
+</ul>
+
+<h3>DEVELOPER</h3>
+
+<ul>
+<li><a href="https://urbanjost.github.io/M_regex/fpm-ford/index.html">ford(1) output</a>.</li>
+<li><a href="docs/STATUS.md">github action status</a> 
+<!--</li>
+<li><a href="https://urbanjost.github.io/M_regex/doxygen_out/html/index.html">doxygen(1) output</a>.
+<h2>--></h2></li>
+</ul>
+
+<h2>PEDIGREE</h2>
+
+<p>This is a modified version of the Fortran wiki
+ entry <a href="https://fortranwiki.org/fortran/show/regex_module">regex_module</a></p>
+
+<h2>SEE ALSO</h2>
+
+<ul>
+<li>https://github.com/sage-git/regex-fortran</li>
+<li>https://github.com/urbanjost/M_match </li>
+<li>https://github.com/ZedThree/fortran_pcre </li>
+<li>https://github.com/interkosmos/fortran-unix </li>
+<li>https://github.com/urbanjost/general-purpose-fortran </li>
+<li>https://github.com/vmagnin/gtk-fortran/blob/gtk3/examples/regex.f90 </li>
+<li>https://swtch.com/~rsc/regexp/ </li>
+<li>https://fortran-lang.discourse.group/t/regular-expressions-regex-and-fortran/778 </li>
+<li><p>https://github.com/search?q=fortran+regex </p></li>
+<li><p>http://www.pcre.org/ </p></li>
+<li>https://developer.gnome.org/glib/stable/glib-Perl-compatible-regular-expressions.html </li>
+<li>https://en.wikipedia.org/wiki/GLib </li>
+</ul>
+
+<hr />
+
+<h2><img src="docs/images/ref.gif" alt="-" title="" /></h2>
+
+<h2>REFERENCES</h2>
+
+<h2>   - <a href="https://en.wikipedia.org/wiki/Regular_expression">Wikipedia</a></h2>
+<p><div class='property'> category: <a class='category_link' href='/fortran/list/code'>code</a></div></p>
+  <div class="byline">
+  Revised on Wed 21 Dec 2022 07:39:44 PM EST
+  by
+  <a class="existingWikiWord" href="urbanjs.xhtml">urbanjs</a>
+  </div>
+  </div>
+ </div>
+</body>
+</html>
