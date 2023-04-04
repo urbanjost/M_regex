@@ -23,6 +23,7 @@ integer                      :: i
       write(*,*) 'match="',regmatch(i,input_line,matches),'"'
    ENDDO
 
+   unit_check_command=''
    unit_check_keep_going=.true.
 !  unit_check_level=1
    unit_check_level=0
