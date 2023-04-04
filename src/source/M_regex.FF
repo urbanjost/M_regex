@@ -363,14 +363,11 @@ IMPLEMENTATION CHOICES
    ( basic ) REs are anchors, not ordinary characters.
 UNIT TEST
  
-    When porting to a new programming environment use the
-    built-in unit test ...
+   The test program test_suite_M_regex may be run via "fpm test"
+   or when M_regex(3f) is built as part of the GPF (General Purpose
+   Fortran library) but requires the test framework in GPF so it
+   cannot be run stand-alone.
  
-     program test_M_regex
-     use M_regex, only : test_suite_M_regex
-        call test_suite_M_regex()
-     end program test_M_regex
-
 SEE ALSO
 
    Regular Expression Notation, IEEE Std, 1003.2, section 2.8.
@@ -1385,7 +1382,6 @@ $!@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 $IFDEF TESTPRG90
 program test_program
 use M_regex, only: regex_type, regcomp, regexec, regmatch, regfree
-use M_regex, only: test_suite_M_regex
 type(regex_type)             :: regex
 integer,parameter            :: maxmatch=10
 integer                      :: matches(2,maxmatch)
@@ -1404,8 +1400,6 @@ logical                      :: match
       write(*,*) 'match="',regmatch(i,input_line,matches),'"'
    ENDDO
    call regfree(regex)
-
-   call test_suite_m_regex()
 
 end program test_program
 !===================================================================================================================================

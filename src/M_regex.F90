@@ -344,13 +344,10 @@
 !!    ( basic ) REs are anchors, not ordinary characters.
 !!##UNIT TEST
 !!
-!!     When porting to a new programming environment use the
-!!     built-in unit test ...
-!!
-!!      program test_M_regex
-!!      use M_regex, only : test_suite_M_regex
-!!         call test_suite_M_regex()
-!!      end program test_M_regex
+!!    The test program test_suite_M_regex may be run via "fpm test"
+!!    or when M_regex(3f) is built as part of the GPF (General Purpose
+!!    Fortran library) but requires the test framework in GPF so it
+!!    cannot be run stand-alone.
 !!
 !!##SEE ALSO
 !!
