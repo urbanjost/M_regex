@@ -1,4 +1,4 @@
-# TOML file for fpm as described at https://github.com/fortran-lang/fpm/blob/master/manifest-reference.md
+# TOML file for fpm as described at https://fpm.fortran-lang.org/en/spec/manifest.html
 name = "M_regex"
 version = "0.1.0"
 license = "MIT"
@@ -13,6 +13,7 @@ homepage = "https://github.com/urbanjost/M_regex.git"
 auto-executables = true
 auto-tests = true
 auto-examples = true
+#module-naming = true
 
 [install]
 library = false
@@ -30,4 +31,4 @@ name="test_suite_M_regex"
 source-dir="test"
 main="test_suite_M_regex.f90"
 [test.dependencies]
-M_msg = { git = "https://github.com/urbanjost/M_msg.git" }
+M_framework = { git = "https://github.com/urbanjost/M_framework.git" }

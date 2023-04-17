@@ -1,7 +1,7 @@
 program test_program
 use M_regex, only: regex_type, regcomp, regexec, regmatch, regfree, regerror
-use M_verify, only: unit_check, unit_check_good, unit_check_bad, unit_check_done, unit_check_start, unit_check_level
-use M_verify, only : unit_check_command, unit_check_keep_going, unit_check_level, unit_check_stop
+use M_framework__verify, only: unit_check, unit_check_good, unit_check_bad, unit_check_done, unit_check_start, unit_check_level
+use M_framework__verify, only : unit_check_command, unit_check_keep_going, unit_check_level, unit_check_stop
 implicit none
  
 type(regex_type)             :: regex
@@ -142,7 +142,7 @@ end subroutine test_regex
 
 subroutine mymatch(expression,string,expected)
 use, intrinsic :: iso_fortran_env, only : ERROR_UNIT
-use M_verify, only: unit_check, unit_check_good, unit_check_bad, unit_check_done, unit_check_start, unit_check_level
+use M_framework__verify, only: unit_check, unit_check_good, unit_check_bad, unit_check_done, unit_check_start, unit_check_level
 character(len=*),intent(in) :: expression
 character(len=*),intent(in) :: string
 logical,intent(in)          :: expected
