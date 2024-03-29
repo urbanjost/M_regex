@@ -1,0 +1,1139 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Fortran interface to POSIX 1003.2 regular expression library">
+    <meta name="author" content="John S. Urban" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>M_regex &ndash; M_regex</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">M_regex </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/programs.html">Programs</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>M_regex
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip"
+                 data-bs-placement="bottom" data-html="true"
+                 title="100.0% of total for modules and submodules.">232 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/M_regex.F90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/m_regex.f90.html'>M_regex.F90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">M_regex</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#types-0"
+         aria-expanded="false" aria-controls="types-0">
+         <h4 class="card-header bg-primary text-white">Derived Types</h4>
+      </a>
+      <div id="types-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/m_regex.html#type-regex_type">regex_type</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#funcs-0"
+         aria-expanded="false" aria-controls="funcs-0">
+         <h4 class="card-header bg-primary text-white">Functions</h4>
+      </a>
+      <div id="funcs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/m_regex.html#proc-regerror">regerror</a>
+            <a class="list-group-item" href="../module/m_regex.html#proc-regexec">regexec</a>
+            <a class="list-group-item" href="../module/m_regex.html#proc-regmatch">regmatch</a>
+        </div>
+      </div>
+    </div>
+
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#subs-0"
+         aria-expanded="false" aria-controls="subs-0">
+         <h4 class="card-header bg-primary text-white">Subroutines</h4>
+      </a>
+      <div id="subs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/m_regex.html#proc-regcomp">regcomp</a>
+            <a class="list-group-item" href="../module/m_regex.html#proc-regfree">regfree</a>
+            <a class="list-group-item" href="../module/m_regex.html#proc-regsub">regsub</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <h2 id="name">NAME</h2>
+<div class="codehilite"><pre><span></span><code><span class="w">  </span><span class="n">M_regex</span><span class="p">(</span><span class="mi">3</span><span class="n">fm</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="o">[</span><span class="n">M_regex</span><span class="o">]</span><span class="w"> </span><span class="k">Fortran</span><span class="w"> </span><span class="n">interface</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">POSIX</span><span class="w"> </span><span class="mf">1003.2</span><span class="w"> </span><span class="n">regular</span>
+<span class="w">  </span><span class="n">expression</span><span class="w"> </span><span class="n">library</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="n">ISO_C_BINDING</span><span class="p">.</span>
+</code></pre></div>
+
+<h2 id="synopsis">SYNOPSIS</h2>
+<div class="codehilite"><pre><span></span><code><span class="w">  </span><span class="n">use</span><span class="w"> </span><span class="n">M_regex</span><span class="p">,</span><span class="w"> </span><span class="n">only</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">regcomp</span><span class="p">(</span><span class="mf">3f</span><span class="p">),</span><span class="w"> </span><span class="n">regexec</span><span class="p">(</span><span class="mf">3f</span><span class="p">),</span><span class="w"> </span><span class="n">regerror</span><span class="p">(</span><span class="mf">3f</span><span class="p">),</span><span class="w"> </span><span class="n">regfree</span><span class="p">(</span><span class="mf">3f</span><span class="p">)</span>
+<span class="w">  </span><span class="n">use</span><span class="w"> </span><span class="n">M_regex</span><span class="p">,</span><span class="w"> </span><span class="n">only</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">regmatch</span><span class="p">(</span><span class="mf">3f</span><span class="p">),</span><span class="w"> </span><span class="n">regsub</span><span class="p">(</span><span class="mf">3f</span><span class="p">)</span>
+</code></pre></div>
+
+<h2 id="description">DESCRIPTION</h2>
+<div class="codehilite"><pre><span></span><code><span class="nx">These</span><span class="w"> </span><span class="nx">routines</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="nx">with</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">C</span><span class="w"> </span><span class="nx">implementation</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">IEEE</span><span class="w"> </span><span class="nx">Std</span><span class="w"> </span><span class="m m-Double">1003.2</span>
+<span class="p">(</span><span class="w"> </span><span class="nx">POSIX</span><span class="m m-Double">.2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="nx">RE</span><span class="w"> </span><span class="p">(</span><span class="nx">Regular</span><span class="w"> </span><span class="nx">Expressions</span><span class="p">).</span>
+
+<span class="nx">o</span><span class="w"> </span><span class="nx">The</span><span class="w"> </span><span class="nx">regcomp</span><span class="p">(</span><span class="mi">3</span><span class="nx">c</span><span class="p">)</span><span class="w"> </span><span class="nx">function</span><span class="w"> </span><span class="nx">compiles</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">RE</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nx">into</span><span class="w"> </span><span class="nx">an</span><span class="w"> </span><span class="nx">internal</span><span class="w"> </span><span class="nx">form</span>
+<span class="nx">o</span><span class="w"> </span><span class="nx">regexec</span><span class="p">(</span><span class="mi">3</span><span class="nx">c</span><span class="p">)</span><span class="w"> </span><span class="nx">matches</span><span class="w"> </span><span class="nx">that</span><span class="w"> </span><span class="nx">internal</span><span class="w"> </span><span class="nx">form</span><span class="w"> </span><span class="nx">against</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nx">reports</span>
+<span class="w">  </span><span class="nx">results</span>
+<span class="nx">o</span><span class="w"> </span><span class="nx">regerror</span><span class="p">(</span><span class="mi">3</span><span class="nx">c</span><span class="p">)</span><span class="w"> </span><span class="nx">transforms</span><span class="w"> </span><span class="nx">error</span><span class="w"> </span><span class="nx">codes</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">either</span><span class="w"> </span><span class="nx">into</span><span class="w"> </span><span class="nx">human</span><span class="o">-</span><span class="nx">readable</span>
+<span class="w">  </span><span class="nx">messages</span>
+<span class="nx">o</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nx">regfree</span><span class="p">(</span><span class="mi">3</span><span class="nx">c</span><span class="p">)</span><span class="w"> </span><span class="nx">frees</span><span class="w"> </span><span class="nx">any</span><span class="w"> </span><span class="nx">dynamically</span><span class="o">-</span><span class="nx">allocated</span><span class="w"> </span><span class="nx">storage</span><span class="w"> </span><span class="nx">used</span><span class="w"> </span><span class="nx">by</span>
+<span class="w">  </span><span class="nx">the</span><span class="w"> </span><span class="nx">internal</span><span class="w"> </span><span class="nx">form</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">an</span><span class="w"> </span><span class="nx">RE</span><span class="p">.</span>
+
+<span class="nx">The</span><span class="w"> </span><span class="nx">Fortran</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">composed</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">wrapper</span><span class="w"> </span><span class="nx">routines</span><span class="w"> </span><span class="nx">that</span><span class="w"> </span><span class="nx">call</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">C</span>
+<span class="kn">library</span><span class="p">,</span><span class="w"> </span><span class="nx">plus</span><span class="w"> </span><span class="nx">some</span><span class="w"> </span><span class="nx">extensions</span><span class="w"> </span><span class="p">(</span><span class="nx">ie</span><span class="p">.</span><span class="w"> </span><span class="nx">regmatch</span><span class="p">(</span><span class="mi">3</span><span class="nx">f</span><span class="p">),</span><span class="w"> </span><span class="nx">regsub</span><span class="p">(</span><span class="mi">3</span><span class="nx">f</span><span class="p">)).</span><span class="w"> </span><span class="nx">See</span><span class="w"> </span><span class="nx">the</span>
+<span class="nx">C</span><span class="w"> </span><span class="nx">documentation</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">further</span><span class="w"> </span><span class="nx">details</span><span class="w"> </span><span class="nx">about</span><span class="w"> </span><span class="nx">implementation</span><span class="p">,</span><span class="w"> </span><span class="nx">performance</span><span class="p">,</span>
+<span class="k">and</span><span class="w"> </span><span class="nx">limitations</span><span class="p">.</span>
+
+<span class="nx">The</span><span class="w"> </span><span class="nx">following</span><span class="w"> </span><span class="nx">constructs</span><span class="w"> </span><span class="nx">are</span><span class="w"> </span><span class="nx">recognized</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">ERE</span><span class="w"> </span><span class="p">(</span><span class="nx">Extended</span><span class="w"> </span><span class="nx">Regular</span>
+<span class="nx">Expression</span><span class="p">):</span>
+
+<span class="w"> </span><span class="p">.</span><span class="w">     </span><span class="nx">Matches</span><span class="w"> </span><span class="nx">any</span><span class="w"> </span><span class="nx">character</span><span class="w"> </span><span class="nx">except</span><span class="w"> </span><span class="nx">newline</span><span class="p">.</span>
+<span class="w"> </span><span class="o">*</span><span class="w">     </span><span class="p">(</span><span class="nx">postfix</span><span class="p">)</span><span class="w"> </span><span class="nx">Matches</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">preceding</span><span class="w"> </span><span class="nx">expression</span><span class="w"> </span><span class="nx">zero</span><span class="p">,</span><span class="w"> </span><span class="nx">one</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="nx">several</span><span class="w"> </span><span class="nx">times</span>
+<span class="w"> </span><span class="o">+</span><span class="w">     </span><span class="p">(</span><span class="nx">postfix</span><span class="p">)</span><span class="w"> </span><span class="nx">Matches</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">preceding</span><span class="w"> </span><span class="nx">expression</span><span class="w"> </span><span class="nx">one</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="nx">several</span><span class="w"> </span><span class="nx">times</span>
+<span class="w"> </span><span class="p">?</span><span class="w">     </span><span class="p">(</span><span class="nx">postfix</span><span class="p">)</span><span class="w"> </span><span class="nx">Matches</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">preceding</span><span class="w"> </span><span class="nx">expression</span><span class="w"> </span><span class="nx">once</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="nx">at</span><span class="w"> </span><span class="nx">all</span>
+<span class="w"> </span><span class="p">[..]</span><span class="w">  </span><span class="nx">Character</span><span class="w"> </span><span class="nx">set</span><span class="p">.</span><span class="w"> </span><span class="nx">Ranges</span><span class="w"> </span><span class="nx">are</span><span class="w"> </span><span class="nx">denoted</span><span class="w"> </span><span class="nx">with</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="p">[</span><span class="nx">a</span><span class="o">-</span><span class="nx">z</span><span class="p">]</span><span class="w"> </span><span class="p">.</span>
+<span class="w">       </span><span class="nx">An</span><span class="w"> </span><span class="nx">initial</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="p">[</span><span class="o">^</span><span class="mi">0</span><span class="o">-</span><span class="mi">9</span><span class="p">]</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="nx">complements</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">set</span><span class="p">.</span><span class="w"> </span><span class="nx">To</span>
+<span class="w">       </span><span class="nx">include</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="nx">character</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">set</span><span class="p">,</span><span class="w"> </span><span class="nx">make</span><span class="w"> </span><span class="nx">it</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">first</span><span class="w"> </span><span class="nx">character</span>
+<span class="w">       </span><span class="nx">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">set</span><span class="p">.</span><span class="w"> </span><span class="nx">To</span><span class="w"> </span><span class="nx">include</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">character</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">set</span><span class="p">,</span><span class="w"> </span><span class="nx">make</span><span class="w"> </span><span class="nx">it</span>
+<span class="w">       </span><span class="nx">the</span><span class="w"> </span><span class="nx">first</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">last</span><span class="w"> </span><span class="nx">character</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">set</span><span class="p">.</span>
+
+<span class="w"> </span><span class="o">^</span><span class="w">        </span><span class="nx">Matches</span><span class="w"> </span><span class="nx">at</span><span class="w"> </span><span class="nx">beginning</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">line</span><span class="p">:</span><span class="w"> </span><span class="nx">either</span><span class="w"> </span><span class="nx">at</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">beginning</span>
+<span class="w">          </span><span class="nx">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">matched</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="nx">just</span><span class="w"> </span><span class="nx">after</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="w"> </span><span class="nx">character</span><span class="p">.</span>
+<span class="w"> </span><span class="err">$</span><span class="w">        </span><span class="nx">Matches</span><span class="w"> </span><span class="nx">at</span><span class="w"> </span><span class="nx">end</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">line</span><span class="p">:</span><span class="w"> </span><span class="nx">either</span><span class="w"> </span><span class="nx">at</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">end</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">matched</span>
+<span class="w">          </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="nx">just</span><span class="w"> </span><span class="nx">before</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="w"> </span><span class="nx">character</span><span class="p">.</span>
+<span class="w"> </span><span class="o">|</span><span class="w">        </span><span class="p">(</span><span class="nx">infix</span><span class="p">)</span><span class="w"> </span><span class="nx">Alternative</span><span class="w"> </span><span class="nx">between</span><span class="w"> </span><span class="nx">two</span><span class="w"> </span><span class="nx">expressions</span><span class="p">.</span>
+<span class="w"> </span><span class="p">(..)</span><span class="w">     </span><span class="nx">Grouping</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nx">naming</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">enclosed</span><span class="w"> </span><span class="nx">expression</span><span class="p">.</span>
+<span class="w"> </span><span class="err">\</span><span class="mi">1</span><span class="w">       </span><span class="nx">The</span><span class="w"> </span><span class="nx">text</span><span class="w"> </span><span class="nx">matched</span><span class="w"> </span><span class="nx">by</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">first</span><span class="w"> </span><span class="err">\</span><span class="p">(</span><span class="o">...</span><span class="err">\</span><span class="p">)</span><span class="w"> </span><span class="nx">expression</span><span class="w"> </span><span class="p">(</span>
+<span class="w">          </span><span class="err">\</span><span class="mi">2</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">second</span><span class="w"> </span><span class="nx">expression</span><span class="p">,</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nx">so</span><span class="w"> </span><span class="nx">on</span><span class="w"> </span><span class="nx">up</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="err">\</span><span class="mi">9</span><span class="w"> </span><span class="p">).</span>
+<span class="w"> </span><span class="err">\</span><span class="nx">b</span><span class="w">       </span><span class="nx">Matches</span><span class="w"> </span><span class="nx">word</span><span class="w"> </span><span class="nx">boundaries</span><span class="p">.</span>
+<span class="w"> </span><span class="err">\</span><span class="w">        </span><span class="nx">Quotes</span><span class="w"> </span><span class="nx">special</span><span class="w"> </span><span class="nx">characters</span><span class="p">.</span><span class="w"> </span><span class="nx">The</span><span class="w"> </span><span class="nx">special</span><span class="w"> </span><span class="nx">characters</span><span class="w"> </span><span class="nx">are</span><span class="w"> </span><span class="err">$</span><span class="o">^</span><span class="err">\</span><span class="p">.</span><span class="o">*+</span><span class="p">?[]</span><span class="w"> </span><span class="p">.</span>
+</code></pre></div>
+
+<h2 id="description_1">DESCRIPTION</h2>
+<div class="codehilite"><pre><span></span><code><span class="n">Regular</span><span class="w"> </span><span class="n">expressions</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">REs</span><span class="w"> </span><span class="p">),</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">defined</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">IEEE</span><span class="w"> </span><span class="n">Std</span><span class="w"> </span><span class="mf">1003.2</span>
+<span class="p">(</span><span class="w"> </span><span class="n">POSIX</span><span class="mf">.2</span><span class="w"> </span><span class="p">),</span><span class="w"> </span><span class="n">come</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">two</span><span class="w"> </span><span class="nl">forms</span><span class="p">:</span><span class="w"> </span><span class="n">modern</span><span class="w"> </span><span class="n">REs</span><span class="w"> </span><span class="p">(</span><span class="n">roughly</span><span class="w"> </span><span class="n">those</span><span class="w"> </span><span class="k">of</span>
+<span class="n">egrep</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="mf">1003.2</span><span class="w"> </span><span class="n">calls</span><span class="w"> </span><span class="n">these</span><span class="w"> </span><span class="n">extended</span><span class="w"> </span><span class="n">REs</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">ERE</span><span class="p">)</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">obsolete</span><span class="w"> </span><span class="n">REs</span>
+<span class="p">(</span><span class="n">roughly</span><span class="w"> </span><span class="n">those</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">ed</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="mf">1003.2</span><span class="w"> </span><span class="n">basic</span><span class="w"> </span><span class="n">REs</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">BRE</span><span class="p">).</span><span class="w"> </span><span class="n">BRE</span><span class="w"> </span><span class="n">mostly</span>
+<span class="n">exist</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">backward</span><span class="w"> </span><span class="n">compatibility</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="ow">some</span><span class="w"> </span><span class="k">old</span><span class="w"> </span><span class="n">programs</span><span class="p">;</span><span class="w"> </span><span class="n">they</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span>
+<span class="n">discussed</span><span class="w"> </span><span class="k">at</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">end</span><span class="p">.</span><span class="w"> </span><span class="n">IEEE</span><span class="w"> </span><span class="n">Std</span><span class="w"> </span><span class="mf">1003.2</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">POSIX</span><span class="mf">.2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">leaves</span><span class="w"> </span><span class="ow">some</span>
+<span class="n">aspects</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">RE</span><span class="w"> </span><span class="n">syntax</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">semantics</span><span class="w"> </span><span class="k">open</span><span class="p">;</span><span class="w"> </span><span class="n">decisions</span><span class="w"> </span><span class="k">on</span>
+<span class="n">these</span><span class="w"> </span><span class="n">aspects</span><span class="w"> </span><span class="n">mean</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">conforming</span><span class="w"> </span><span class="n">implementations</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">IEEE</span><span class="w"> </span><span class="n">Std</span><span class="w"> </span><span class="mf">1003.2</span>
+<span class="p">(</span><span class="w"> </span><span class="n">POSIX</span><span class="mf">.2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">may</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">completely</span><span class="w"> </span><span class="n">compatible</span><span class="p">.</span>
+
+<span class="n">A</span><span class="w"> </span><span class="p">(</span><span class="n">modern</span><span class="p">)</span><span class="w"> </span><span class="n">RE</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">more</span><span class="w"> </span><span class="n">non</span><span class="o">-</span><span class="n">empty</span><span class="w"> </span><span class="n">branches</span><span class="p">,</span><span class="w"> </span><span class="n">separated</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="o">|</span><span class="p">.</span>
+<span class="n">It</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="n">anything</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">branches</span><span class="p">.</span>
+
+<span class="n">A</span><span class="w"> </span><span class="n">branch</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">more</span><span class="w"> </span><span class="n">pieces</span><span class="p">,</span><span class="w"> </span><span class="n">concatenated</span><span class="p">.</span><span class="w"> </span><span class="n">It</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">match</span>
+<span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">first</span><span class="p">,</span><span class="w"> </span><span class="n">followed</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">match</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">second</span><span class="p">,</span><span class="w"> </span><span class="n">etc</span><span class="p">.</span>
+
+<span class="n">A</span><span class="w"> </span><span class="n">piece</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">atom</span><span class="w"> </span><span class="n">possibly</span><span class="w"> </span><span class="n">followed</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">single</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="vm">?</span><span class="w"> </span><span class="p">,</span>
+<span class="ow">or</span><span class="w"> </span><span class="n">bound</span><span class="p">.</span><span class="w"> </span><span class="n">An</span><span class="w"> </span><span class="n">atom</span><span class="w"> </span><span class="n">followed</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">sequence</span>
+<span class="k">of</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">more</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">atom</span><span class="p">.</span><span class="w"> </span><span class="n">An</span><span class="w"> </span><span class="n">atom</span><span class="w"> </span><span class="n">followed</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">matches</span>
+<span class="n">a</span><span class="w"> </span><span class="k">sequence</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">more</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">atom</span><span class="p">.</span><span class="w"> </span><span class="n">An</span><span class="w"> </span><span class="n">atom</span><span class="w"> </span><span class="n">followed</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="vm">?</span>
+<span class="n">matches</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">sequence</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">atom</span><span class="p">.</span>
+
+<span class="n">A</span><span class="w"> </span><span class="n">bound</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="n">followed</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">unsigned</span><span class="w"> </span><span class="nc">decimal</span><span class="w"> </span><span class="k">integer</span><span class="p">,</span><span class="w"> </span><span class="n">possibly</span>
+<span class="n">followed</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">possibly</span><span class="w"> </span><span class="n">followed</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">another</span><span class="w"> </span><span class="n">unsigned</span><span class="w"> </span><span class="nc">decimal</span>
+<span class="k">integer</span><span class="p">,</span><span class="w"> </span><span class="n">always</span><span class="w"> </span><span class="n">followed</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="err">}</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="n">integers</span><span class="w"> </span><span class="n">must</span><span class="w"> </span><span class="n">lie</span><span class="w"> </span><span class="ow">between</span>
+<span class="mi">0</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">RE_DUP_MAX</span><span class="w"> </span><span class="p">(</span><span class="mi">255</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">inclusive</span><span class="p">,</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">there</span><span class="w"> </span><span class="k">are</span><span class="w"> </span><span class="n">two</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">them</span><span class="p">,</span>
+<span class="n">the</span><span class="w"> </span><span class="k">first</span><span class="w"> </span><span class="n">may</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">exceed</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">second</span><span class="p">.</span><span class="w"> </span><span class="n">An</span><span class="w"> </span><span class="n">atom</span><span class="w"> </span><span class="n">followed</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">bound</span>
+<span class="n">containing</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="k">integer</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="k">no</span><span class="w"> </span><span class="n">comma</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">sequence</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">exactly</span>
+<span class="n">i</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">atom</span><span class="p">.</span><span class="w"> </span><span class="n">An</span><span class="w"> </span><span class="n">atom</span><span class="w"> </span><span class="n">followed</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">bound</span><span class="w"> </span><span class="n">containing</span><span class="w"> </span><span class="n">one</span>
+<span class="k">integer</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">comma</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">sequence</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">more</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">the</span>
+<span class="n">atom</span><span class="p">.</span><span class="w"> </span><span class="n">An</span><span class="w"> </span><span class="n">atom</span><span class="w"> </span><span class="n">followed</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">bound</span><span class="w"> </span><span class="n">containing</span><span class="w"> </span><span class="n">two</span><span class="w"> </span><span class="n">integers</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">j</span>
+<span class="n">matches</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">sequence</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="n">through</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="p">(</span><span class="n">inclusive</span><span class="p">)</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">atom</span><span class="p">.</span>
+
+<span class="n">An</span><span class="w"> </span><span class="n">atom</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">regular</span><span class="w"> </span><span class="n">expression</span><span class="w"> </span><span class="n">enclosed</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">(</span><span class="n">matching</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">match</span>
+<span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">regular</span><span class="w"> </span><span class="n">expression</span><span class="p">),</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">empty</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">(</span><span class="n">matching</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">null</span>
+<span class="n">string</span><span class="p">)</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">bracket</span><span class="w"> </span><span class="n">expression</span><span class="w"> </span><span class="p">(</span><span class="n">see</span><span class="w"> </span><span class="n">below</span><span class="p">),</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="p">(</span><span class="n">matching</span><span class="w"> </span><span class="ow">any</span>
+<span class="n">single</span><span class="w"> </span><span class="k">character</span><span class="p">),</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="p">(</span><span class="n">matching</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">null</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="k">at</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">beginning</span>
+<span class="k">of</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">line</span><span class="p">),</span><span class="w"> </span><span class="err">$</span><span class="w"> </span><span class="p">(</span><span class="n">matching</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">null</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="k">at</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">line</span><span class="p">),</span><span class="w"> </span><span class="n">a</span>
+<span class="err">\\</span><span class="w"> </span><span class="n">followed</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">characters</span><span class="w"> </span><span class="o">^</span><span class="p">.</span><span class="o">[</span><span class="n">$()|*+?{\ (matching</span>
+<span class="n">that character taken as an ordinary character), a \ followed</span>
+<span class="n">by any other character (matching that character taken as an ordinary</span>
+<span class="n">character, as if the \ had not been present ), or a single</span>
+<span class="n">character with no other significance (matching that character). A {</span>
+<span class="n">followed by a character other than a digit is an ordinary character,</span>
+<span class="n">not the beginning of a bound . It is illegal to end an RE with</span>
+<span class="n">\ .</span>
+
+<span class="n">A bracket expression is a list of characters enclosed in [</span><span class="o">]</span>
+<span class="p">.</span><span class="w"> </span><span class="n">It</span><span class="w"> </span><span class="n">normally</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="ow">any</span><span class="w"> </span><span class="n">single</span><span class="w"> </span><span class="k">character</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="p">(</span><span class="n">but</span><span class="w"> </span><span class="n">see</span>
+<span class="n">below</span><span class="p">).</span><span class="w"> </span><span class="k">If</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="n">begins</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="ow">any</span><span class="w"> </span><span class="n">single</span>
+<span class="k">character</span><span class="w"> </span><span class="p">(</span><span class="n">but</span><span class="w"> </span><span class="n">see</span><span class="w"> </span><span class="n">below</span><span class="p">)</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">rest</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">list</span><span class="p">.</span><span class="w"> </span><span class="k">If</span><span class="w"> </span><span class="n">two</span>
+<span class="n">characters</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="k">are</span><span class="w"> </span><span class="n">separated</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">shorthand</span>
+<span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">full</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">characters</span><span class="w"> </span><span class="ow">between</span><span class="w"> </span><span class="n">those</span><span class="w"> </span><span class="n">two</span><span class="w"> </span><span class="p">(</span><span class="n">inclusive</span><span class="p">)</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span>
+<span class="n">collating</span><span class="w"> </span><span class="k">sequence</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span><span class="w"> </span><span class="o">[</span><span class="n">0-9</span><span class="o">]</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nf">ASCII</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="ow">any</span><span class="w"> </span><span class="nc">decimal</span>
+<span class="n">digit</span><span class="p">.</span><span class="w"> </span><span class="n">It</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">illegal</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">two</span><span class="w"> </span><span class="n">ranges</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">share</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">endpoint</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span>
+<span class="n">a</span><span class="o">-</span><span class="n">c</span><span class="o">-</span><span class="n">e</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="n">Ranges</span><span class="w"> </span><span class="k">are</span><span class="w"> </span><span class="n">very</span><span class="w"> </span><span class="n">collating</span><span class="o">-</span><span class="k">sequence</span><span class="o">-</span><span class="n">dependent</span><span class="p">,</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">portable</span>
+<span class="n">programs</span><span class="w"> </span><span class="n">should</span><span class="w"> </span><span class="n">avoid</span><span class="w"> </span><span class="n">relying</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">them</span><span class="p">.</span>
+
+<span class="k">To</span><span class="w"> </span><span class="k">include</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">literal</span><span class="w"> </span><span class="err">]</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">list</span><span class="p">,</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">first</span><span class="w"> </span><span class="k">character</span>
+<span class="p">(</span><span class="n">following</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">possible</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="p">).</span><span class="w"> </span><span class="k">To</span><span class="w"> </span><span class="k">include</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">literal</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">make</span>
+<span class="n">it</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">first</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="k">last</span><span class="w"> </span><span class="k">character</span><span class="p">,</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">second</span><span class="w"> </span><span class="n">endpoint</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">range</span><span class="p">.</span><span class="w"> </span><span class="k">To</span>
+<span class="k">use</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">literal</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">first</span><span class="w"> </span><span class="n">endpoint</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">range</span><span class="p">,</span><span class="w"> </span><span class="n">enclose</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="ow">in</span>
+<span class="o">[</span><span class="n">. and .</span><span class="o">]</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">collating</span><span class="w"> </span><span class="k">element</span><span class="w"> </span><span class="p">(</span><span class="n">see</span><span class="w"> </span><span class="n">below</span><span class="p">).</span><span class="w"> </span><span class="k">With</span>
+<span class="n">the</span><span class="w"> </span><span class="k">exception</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">these</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="ow">some</span><span class="w"> </span><span class="n">combinations</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="o">[</span><span class="n"> (see</span>
+<span class="n">next paragraphs), all other special characters, including \ ,</span>
+<span class="n">lose their special significance within a bracket expression.</span>
+
+<span class="n">Within a bracket expression, a collating element (a character,</span>
+<span class="n">a multi-character sequence that collates as if it were a single</span>
+<span class="n">character, or a collating-sequence name for either) enclosed in</span>
+<span class="n">[. and .</span><span class="o">]</span><span class="w"> </span><span class="n">stands</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">sequence</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">characters</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">that</span>
+<span class="n">collating</span><span class="w"> </span><span class="k">element</span><span class="p">.</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="k">sequence</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">single</span><span class="w"> </span><span class="k">element</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">bracket</span>
+<span class="n">expression</span><span class="err">&#39;</span><span class="n">s</span><span class="w"> </span><span class="n">list</span><span class="p">.</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">bracket</span><span class="w"> </span><span class="n">expression</span><span class="w"> </span><span class="n">containing</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">multi</span><span class="o">-</span><span class="k">character</span>
+<span class="n">collating</span><span class="w"> </span><span class="k">element</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">thus</span><span class="w"> </span><span class="k">match</span><span class="w"> </span><span class="n">more</span><span class="w"> </span><span class="k">than</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="k">character</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">the</span>
+<span class="n">collating</span><span class="w"> </span><span class="k">sequence</span><span class="w"> </span><span class="n">includes</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">ch</span><span class="w"> </span><span class="n">collating</span><span class="w"> </span><span class="k">element</span><span class="p">,</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">RE</span>
+<span class="o">[</span><span class="n">[.ch.</span><span class="o">]</span><span class="err">]</span><span class="o">*</span><span class="n">c</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">first</span><span class="w"> </span><span class="n">five</span><span class="w"> </span><span class="n">characters</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">chchcc</span><span class="w"> </span><span class="p">.</span>
+
+<span class="k">Within</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">bracket</span><span class="w"> </span><span class="n">expression</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">collating</span><span class="w"> </span><span class="k">element</span><span class="w"> </span><span class="n">enclosed</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="o">[</span><span class="n">=</span>
+<span class="n">and =</span><span class="o">]</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">equivalence</span><span class="w"> </span><span class="k">class</span><span class="p">,</span><span class="w"> </span><span class="n">standing</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">sequences</span><span class="w"> </span><span class="k">of</span>
+<span class="n">characters</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="ow">all</span><span class="w"> </span><span class="n">collating</span><span class="w"> </span><span class="n">elements</span><span class="w"> </span><span class="n">equivalent</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">one</span><span class="p">,</span><span class="w"> </span><span class="n">including</span>
+<span class="n">itself</span><span class="p">.</span><span class="w"> </span><span class="p">(</span><span class="k">If</span><span class="w"> </span><span class="n">there</span><span class="w"> </span><span class="k">are</span><span class="w"> </span><span class="k">no</span><span class="w"> </span><span class="n">other</span><span class="w"> </span><span class="n">equivalent</span><span class="w"> </span><span class="n">collating</span><span class="w"> </span><span class="n">elements</span><span class="p">,</span><span class="w"> </span><span class="n">the</span>
+<span class="n">treatment</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">enclosing</span><span class="w"> </span><span class="n">delimiters</span><span class="w"> </span><span class="n">were</span><span class="w"> </span><span class="o">[</span><span class="n">. and .</span><span class="o">]</span>
+<span class="p">.)</span><span class="w"> </span><span class="k">For</span><span class="w"> </span><span class="n">example</span><span class="p">,</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="k">are</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">members</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">equivalence</span>
+<span class="k">class</span><span class="p">,</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="o">[</span><span class="n">[=x=</span><span class="o">]</span><span class="err">]</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="o">[</span><span class="n">[=y=</span><span class="o">]</span><span class="err">]</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="o">[</span><span class="n">xy</span><span class="o">]</span><span class="w"> </span><span class="k">are</span><span class="w"> </span><span class="ow">all</span>
+<span class="n">synonymous</span><span class="p">.</span><span class="w"> </span><span class="n">An</span><span class="w"> </span><span class="n">equivalence</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="n">may</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">endpoint</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">range</span><span class="p">.</span>
+
+<span class="k">Within</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">bracket</span><span class="w"> </span><span class="n">expression</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">character</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="n">enclosed</span><span class="w"> </span><span class="ow">in</span>
+<span class="o">[</span><span class="n">: and :</span><span class="o">]</span><span class="w"> </span><span class="n">stands</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="ow">all</span><span class="w"> </span><span class="n">characters</span><span class="w"> </span><span class="n">belonging</span>
+<span class="k">to</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="k">class</span><span class="p">.</span><span class="w"> </span><span class="n">Standard</span><span class="w"> </span><span class="k">character</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="k">names</span><span class="w"> </span><span class="k">are</span><span class="err">:</span>
+
+<span class="w">      </span><span class="n">alnum</span><span class="w">    </span><span class="n">digit</span><span class="w">    </span><span class="n">punct</span>
+<span class="w">      </span><span class="n">alpha</span><span class="w">    </span><span class="n">graph</span><span class="w">    </span><span class="nf">space</span>
+<span class="w">      </span><span class="n">blank</span><span class="w">    </span><span class="nf">lower</span><span class="w">    </span><span class="nf">upper</span>
+<span class="w">      </span><span class="n">cntrl</span><span class="w">    </span><span class="k">print</span><span class="w">    </span><span class="n">xdigit</span>
+
+<span class="n">These</span><span class="w"> </span><span class="n">stand</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">character</span><span class="w"> </span><span class="n">classes</span><span class="w"> </span><span class="n">defined</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">ctype</span><span class="p">(</span><span class="mi">3</span><span class="p">).</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">locale</span>
+<span class="n">may</span><span class="w"> </span><span class="n">provide</span><span class="w"> </span><span class="n">others</span><span class="p">.</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="k">character</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="n">may</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">endpoint</span>
+<span class="k">of</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">range</span><span class="p">.</span>
+
+<span class="n">A</span><span class="w"> </span><span class="n">bracketed</span><span class="w"> </span><span class="n">expression</span><span class="w"> </span><span class="ow">like</span><span class="w"> </span><span class="o">[</span><span class="n">[:class:</span><span class="o">]</span><span class="err">]</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">match</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">single</span>
+<span class="k">character</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">belongs</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">character</span><span class="w"> </span><span class="k">class</span><span class="p">.</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="nf">reverse</span><span class="p">,</span><span class="w"> </span><span class="n">matching</span>
+<span class="ow">any</span><span class="w"> </span><span class="k">character</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">does</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">belong</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">specific</span><span class="w"> </span><span class="k">class</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">negation</span>
+<span class="n">operator</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">bracket</span><span class="w"> </span><span class="n">expressions</span><span class="w"> </span><span class="n">may</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="nl">used</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="n">^[:class:</span><span class="o">]</span><span class="err">]</span><span class="w"> </span><span class="p">.</span>
+
+<span class="n">There</span><span class="w"> </span><span class="k">are</span><span class="w"> </span><span class="n">two</span><span class="w"> </span><span class="n">special</span><span class="w"> </span><span class="n">cases</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">bracket</span><span class="w"> </span><span class="nl">expressions</span><span class="p">:</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">bracket</span>
+<span class="n">expressions</span><span class="w"> </span><span class="o">[</span><span class="n">[:&lt;:</span><span class="o">]</span><span class="err">]</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="o">[</span><span class="n">[:&gt;:</span><span class="o">]</span><span class="err">]</span><span class="w"> </span><span class="k">match</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">null</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="k">at</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">beginning</span>
+<span class="ow">and</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">word</span><span class="w"> </span><span class="n">respectively</span><span class="p">.</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">word</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">defined</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">sequence</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">word</span>
+<span class="n">characters</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">neither</span><span class="w"> </span><span class="n">preceded</span><span class="w"> </span><span class="n">nor</span><span class="w"> </span><span class="n">followed</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">word</span><span class="w"> </span><span class="n">characters</span><span class="p">.</span><span class="w"> </span><span class="n">A</span>
+<span class="n">word</span><span class="w"> </span><span class="k">character</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">alnum</span><span class="w"> </span><span class="k">character</span><span class="w"> </span><span class="p">(</span><span class="k">as</span><span class="w"> </span><span class="n">defined</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">ctype</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">an</span>
+<span class="n">underscore</span><span class="p">.</span><span class="w"> </span><span class="n">This</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">extension</span><span class="p">,</span><span class="w"> </span><span class="n">compatible</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">but</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">specified</span>
+<span class="k">by</span><span class="w"> </span><span class="n">IEEE</span><span class="w"> </span><span class="n">Std</span><span class="w"> </span><span class="mf">1003.2</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">POSIX</span><span class="mf">.2</span><span class="w"> </span><span class="p">),</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">should</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">caution</span><span class="w"> </span><span class="ow">in</span>
+<span class="n">software</span><span class="w"> </span><span class="n">intended</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">portable</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">other</span><span class="w"> </span><span class="n">systems</span><span class="p">.</span>
+
+<span class="ow">In</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">event</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">RE</span><span class="w"> </span><span class="n">could</span><span class="w"> </span><span class="k">match</span><span class="w"> </span><span class="n">more</span><span class="w"> </span><span class="k">than</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="nf">substring</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">given</span>
+<span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">RE</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">starting</span><span class="w"> </span><span class="n">earliest</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">string</span><span class="p">.</span><span class="w"> </span><span class="k">If</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">RE</span>
+<span class="n">could</span><span class="w"> </span><span class="k">match</span><span class="w"> </span><span class="n">more</span><span class="w"> </span><span class="k">than</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="nf">substring</span><span class="w"> </span><span class="n">starting</span><span class="w"> </span><span class="k">at</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">point</span><span class="p">,</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">matches</span>
+<span class="n">the</span><span class="w"> </span><span class="n">longest</span><span class="p">.</span><span class="w"> </span><span class="n">Subexpressions</span><span class="w"> </span><span class="n">also</span><span class="w"> </span><span class="k">match</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">longest</span><span class="w"> </span><span class="n">possible</span><span class="w"> </span><span class="n">substrings</span><span class="p">,</span>
+<span class="n">subject</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">constraint</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">whole</span><span class="w"> </span><span class="k">match</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">long</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">possible</span><span class="p">,</span>
+<span class="k">with</span><span class="w"> </span><span class="n">subexpressions</span><span class="w"> </span><span class="n">starting</span><span class="w"> </span><span class="n">earlier</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">RE</span><span class="w"> </span><span class="n">taking</span><span class="w"> </span><span class="n">priority</span><span class="w"> </span><span class="k">over</span>
+<span class="n">ones</span><span class="w"> </span><span class="n">starting</span><span class="w"> </span><span class="n">later</span><span class="p">.</span><span class="w"> </span><span class="n">Note</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">higher</span><span class="o">-</span><span class="k">level</span><span class="w"> </span><span class="n">subexpressions</span><span class="w"> </span><span class="n">thus</span><span class="w"> </span><span class="n">take</span>
+<span class="n">priority</span><span class="w"> </span><span class="k">over</span><span class="w"> </span><span class="n">their</span><span class="w"> </span><span class="nf">lower</span><span class="o">-</span><span class="k">level</span><span class="w"> </span><span class="n">component</span><span class="w"> </span><span class="n">subexpressions</span><span class="p">.</span>
+
+<span class="k">Match</span><span class="w"> </span><span class="n">lengths</span><span class="w"> </span><span class="k">are</span><span class="w"> </span><span class="n">measured</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">characters</span><span class="p">,</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">collating</span><span class="w"> </span><span class="n">elements</span><span class="p">.</span><span class="w"> </span><span class="n">A</span>
+<span class="k">null</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">considered</span><span class="w"> </span><span class="n">longer</span><span class="w"> </span><span class="k">than</span><span class="w"> </span><span class="k">no</span><span class="w"> </span><span class="k">match</span><span class="w"> </span><span class="k">at</span><span class="w"> </span><span class="ow">all</span><span class="p">.</span><span class="w"> </span><span class="k">For</span><span class="w"> </span><span class="n">example</span><span class="p">,</span><span class="w"> </span><span class="n">bb</span><span class="o">*</span>
+<span class="n">matches</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">three</span><span class="w"> </span><span class="n">middle</span><span class="w"> </span><span class="n">characters</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">abbbc</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">wee</span><span class="o">|</span><span class="n">week</span><span class="p">)(</span><span class="n">knights</span><span class="o">|</span><span class="n">nights</span><span class="p">)</span>
+<span class="n">matches</span><span class="w"> </span><span class="ow">all</span><span class="w"> </span><span class="n">ten</span><span class="w"> </span><span class="n">characters</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">weeknights</span><span class="p">,</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="p">(.</span><span class="o">*</span><span class="p">).</span><span class="o">*</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">matched</span><span class="w"> </span><span class="n">against</span>
+<span class="n">abc</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">parenthesized</span><span class="w"> </span><span class="n">subexpression</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="ow">all</span><span class="w"> </span><span class="n">three</span><span class="w"> </span><span class="n">characters</span><span class="p">,</span><span class="w"> </span><span class="ow">and</span>
+<span class="k">when</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="p">)</span><span class="o">*</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">matched</span><span class="w"> </span><span class="n">against</span><span class="w"> </span><span class="n">bc</span><span class="w"> </span><span class="k">both</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">whole</span><span class="w"> </span><span class="n">RE</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">parenthesized</span>
+<span class="n">subexpression</span><span class="w"> </span><span class="k">match</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">null</span><span class="w"> </span><span class="n">string</span><span class="p">.</span>
+
+<span class="k">If</span><span class="w"> </span><span class="k">case</span><span class="o">-</span><span class="n">independent</span><span class="w"> </span><span class="n">matching</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">specified</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">effect</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">much</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="ow">all</span>
+<span class="k">case</span><span class="w"> </span><span class="n">distinctions</span><span class="w"> </span><span class="n">had</span><span class="w"> </span><span class="n">vanished</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">alphabet</span><span class="p">.</span><span class="w"> </span><span class="k">When</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">alphabetic</span>
+<span class="n">that</span><span class="w"> </span><span class="ow">exists</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">multiple</span><span class="w"> </span><span class="n">cases</span><span class="w"> </span><span class="n">appears</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">ordinary</span><span class="w"> </span><span class="k">character</span><span class="w"> </span><span class="n">outside</span>
+<span class="n">a</span><span class="w"> </span><span class="n">bracket</span><span class="w"> </span><span class="n">expression</span><span class="p">,</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">effectively</span><span class="w"> </span><span class="n">transformed</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">bracket</span>
+<span class="n">expression</span><span class="w"> </span><span class="n">containing</span><span class="w"> </span><span class="k">both</span><span class="w"> </span><span class="n">cases</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">becomes</span><span class="w"> </span><span class="o">[</span><span class="n">xX</span><span class="o">]</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="k">When</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">appears</span>
+<span class="n">inside</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">bracket</span><span class="w"> </span><span class="n">expression</span><span class="p">,</span><span class="w"> </span><span class="ow">all</span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="n">counterparts</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="k">are</span><span class="w"> </span><span class="n">added</span>
+<span class="k">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">bracket</span><span class="w"> </span><span class="n">expression</span><span class="p">,</span><span class="w"> </span><span class="n">so</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.)</span><span class="w"> </span><span class="o">[</span><span class="n">x</span><span class="o">]</span><span class="w"> </span><span class="n">becomes</span><span class="w"> </span><span class="o">[</span><span class="n">xX</span><span class="o">]</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="o">[</span><span class="n">^x</span><span class="o">]</span>
+<span class="n">becomes</span><span class="w"> </span><span class="o">[</span><span class="n">^xX</span><span class="o">]</span><span class="w"> </span><span class="p">.</span>
+
+<span class="k">No</span><span class="w"> </span><span class="n">particular</span><span class="w"> </span><span class="k">limit</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">imposed</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">REs</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="n">Programs</span><span class="w"> </span><span class="n">intended</span>
+<span class="k">to</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">portable</span><span class="w"> </span><span class="n">should</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">employ</span><span class="w"> </span><span class="n">REs</span><span class="w"> </span><span class="n">longer</span><span class="w"> </span><span class="k">than</span><span class="w"> </span><span class="mi">256</span><span class="w"> </span><span class="n">bytes</span><span class="p">,</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">an</span>
+<span class="n">implementation</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">refuse</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">accept</span><span class="w"> </span><span class="n">such</span><span class="w"> </span><span class="n">REs</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">remain</span><span class="w"> </span><span class="n">POSIX</span><span class="o">-</span><span class="n">compliant</span><span class="p">.</span>
+
+<span class="n">Obsolete</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">basic</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">regular</span><span class="w"> </span><span class="n">expressions</span><span class="w"> </span><span class="n">differ</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">several</span><span class="w"> </span><span class="n">respects</span><span class="p">.</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="k">is</span>
+<span class="n">an</span><span class="w"> </span><span class="n">ordinary</span><span class="w"> </span><span class="k">character</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">there</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="k">no</span><span class="w"> </span><span class="n">equivalent</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">its</span><span class="w"> </span><span class="n">functionality</span><span class="p">.</span><span class="w"> </span><span class="o">+</span>
+<span class="ow">and</span><span class="w"> </span><span class="vm">?</span><span class="w"> </span><span class="k">are</span><span class="w"> </span><span class="n">ordinary</span><span class="w"> </span><span class="n">characters</span><span class="p">,</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">their</span><span class="w"> </span><span class="n">functionality</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">expressed</span>
+<span class="k">using</span><span class="w"> </span><span class="n">bounds</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="err">{</span><span class="mi">1</span><span class="p">,</span><span class="err">}</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="err">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="err">}</span><span class="w"> </span><span class="n">respectively</span><span class="p">).</span><span class="w"> </span><span class="n">Also</span><span class="w"> </span><span class="n">note</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">x</span><span class="o">+</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">modern</span><span class="p">,</span>
+<span class="n">REs</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">equivalent</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">xx</span><span class="o">*</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="n">delimiters</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">bounds</span><span class="w"> </span><span class="k">are</span><span class="w"> </span><span class="err">\{</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="err">\}</span>
+<span class="k">with</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="err">}</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">themselves</span><span class="w"> </span><span class="n">ordinary</span><span class="w"> </span><span class="n">characters</span><span class="p">.</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="n">parentheses</span><span class="w"> </span><span class="k">for</span>
+<span class="n">nested</span><span class="w"> </span><span class="n">subexpressions</span><span class="w"> </span><span class="k">are</span><span class="w"> </span><span class="err">\</span><span class="p">(</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="err">\</span><span class="p">)</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">themselves</span><span class="w"> </span><span class="n">ordinary</span>
+<span class="n">characters</span><span class="p">.</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">ordinary</span><span class="w"> </span><span class="k">character</span><span class="w"> </span><span class="ow">except</span><span class="w"> </span><span class="k">at</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">beginning</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">the</span>
+<span class="n">RE</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">beginning</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">parenthesized</span><span class="w"> </span><span class="n">subexpression</span><span class="p">,</span><span class="w"> </span><span class="err">$</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">ordinary</span>
+<span class="k">character</span><span class="w"> </span><span class="ow">except</span><span class="w"> </span><span class="k">at</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">RE</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">parenthesized</span>
+<span class="n">subexpression</span><span class="p">,</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">ordinary</span><span class="w"> </span><span class="k">character</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">appears</span><span class="w"> </span><span class="k">at</span><span class="w"> </span><span class="n">the</span>
+<span class="n">beginning</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">RE</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">beginning</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">parenthesized</span><span class="w"> </span><span class="n">subexpression</span>
+<span class="p">(</span><span class="k">after</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">possible</span><span class="w"> </span><span class="k">leading</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="p">).</span><span class="w"> </span><span class="n">Finally</span><span class="p">,</span><span class="w"> </span><span class="n">there</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">atom</span><span class="p">,</span><span class="w"> </span><span class="n">a</span>
+<span class="n">back</span><span class="w"> </span><span class="nl">reference</span><span class="p">:</span><span class="w"> </span><span class="err">\</span><span class="w"> </span><span class="n">followed</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">non</span><span class="o">-</span><span class="n">zero</span><span class="w"> </span><span class="nc">decimal</span><span class="w"> </span><span class="n">digit</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">same</span>
+<span class="k">sequence</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">characters</span><span class="w"> </span><span class="n">matched</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">dth</span><span class="w"> </span><span class="n">parenthesized</span><span class="w"> </span><span class="n">subexpression</span>
+<span class="p">(</span><span class="n">numbering</span><span class="w"> </span><span class="n">subexpressions</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">positions</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">their</span><span class="w"> </span><span class="n">opening</span><span class="w"> </span><span class="n">parentheses</span><span class="p">,</span>
+<span class="nf">left</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="nf">right</span><span class="p">),</span><span class="w"> </span><span class="n">so</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.)</span><span class="w"> </span><span class="err">\</span><span class="p">(</span><span class="o">[</span><span class="n">bc</span><span class="o">]</span><span class="err">\</span><span class="p">)</span><span class="err">\</span><span class="mi">1</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="n">bb</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">cc</span><span class="w"> </span><span class="n">but</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">bc</span><span class="w"> </span><span class="p">.</span>
+</code></pre></div>
+
+<h2 id="c-wrappers">C WRAPPERS</h2>
+<div class="codehilite"><pre><span></span><code><span class="nx">Regex</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">defined</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nx">an</span><span class="w"> </span><span class="nx">API</span><span class="w"> </span><span class="nx">using</span><span class="w"> </span><span class="nx">C</span><span class="w"> </span><span class="nx">headers</span><span class="p">.</span><span class="w"> </span><span class="nx">It</span><span class="w"> </span><span class="nx">does</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="nx">define</span><span class="w"> </span><span class="nx">the</span>
+<span class="nx">exact</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">flag</span><span class="w"> </span><span class="nx">tokens</span><span class="p">,</span><span class="w"> </span><span class="nx">just</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">names</span><span class="p">.</span><span class="w"> </span><span class="nx">It</span><span class="w"> </span><span class="nx">also</span><span class="w"> </span><span class="nx">uses</span><span class="w"> </span><span class="nx">an</span><span class="w"> </span><span class="nx">opaque</span>
+<span class="nx">data</span><span class="w"> </span><span class="nx">structure</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">declared</span><span class="w"> </span><span class="nx">numeric</span><span class="w"> </span><span class="k">type</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="k">match</span><span class="w"> </span><span class="nx">array</span><span class="p">.</span>
+<span class="nx">Therefore</span><span class="p">,</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">code</span><span class="w"> </span><span class="nx">must</span><span class="w"> </span><span class="nx">either</span><span class="w"> </span><span class="nx">be</span><span class="w"> </span><span class="nx">generated</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">each</span><span class="w"> </span><span class="nx">target</span>
+<span class="nx">platform</span><span class="p">,</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="nx">it</span><span class="w"> </span><span class="nx">must</span><span class="w"> </span><span class="nx">use</span><span class="w"> </span><span class="nx">wrapper</span><span class="w"> </span><span class="nx">functions</span><span class="w"> </span><span class="nx">written</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">C</span><span class="p">.</span>
+</code></pre></div>
+
+<h2 id="fortran-wrappers">FORTRAN WRAPPERS</h2>
+<div class="codehilite"><pre><span></span><code><span class="n">Fortran</span><span class="w"> </span><span class="n">wrapper</span><span class="w"> </span><span class="n">functions</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">also</span><span class="w"> </span><span class="n">required</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">present</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">normal</span>
+<span class="n">Fortran</span><span class="w"> </span><span class="n">API</span><span class="p">,</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="n">require</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="n">conversions</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">caller</span><span class="p">.</span>
+
+<span class="n">The</span><span class="w"> </span><span class="n">interface</span><span class="w"> </span><span class="n">here</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="n">strictly</span><span class="w"> </span><span class="n">correct</span><span class="p">,</span><span class="w"> </span><span class="n">because</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">does</span><span class="w"> </span><span class="k">not</span>
+<span class="n">explicitly</span><span class="w"> </span><span class="n">convert</span><span class="w"> </span><span class="n">Fortran</span><span class="w"> </span><span class="n">strings</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="n">character</span><span class="w"> </span><span class="n">kind</span><span class="p">.</span>
+<span class="n">Fortran</span><span class="w"> </span><span class="n">only</span><span class="w"> </span><span class="n">supports</span><span class="w"> </span><span class="n">conversion</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="k">string</span><span class="w"> </span><span class="n">kinds</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">assignment</span><span class="p">,</span>
+<span class="k">or</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">rather</span><span class="w"> </span><span class="n">slow</span><span class="w"> </span><span class="n">internal</span><span class="w"> </span><span class="n">WRITE</span><span class="p">.</span><span class="w"> </span><span class="n">For</span><span class="w"> </span><span class="n">now</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">easiest</span><span class="w"> </span><span class="n">approach</span>
+<span class="n">is</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">assume</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">Fortran</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="n">character</span><span class="w"> </span><span class="n">kinds</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">the</span>
+<span class="n">same</span><span class="p">.</span><span class="w"> </span><span class="n">This</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">generally</span><span class="w"> </span><span class="n">true</span><span class="p">,</span><span class="w"> </span><span class="n">but</span><span class="w"> </span><span class="n">UTF</span><span class="o">-</span><span class="mh">8</span><span class="w"> </span><span class="n">strings</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">likely</span><span class="w"> </span><span class="n">to</span>
+<span class="n">cause</span><span class="w"> </span><span class="n">problems</span><span class="p">.</span>
+</code></pre></div>
+
+<h2 id="general">GENERAL</h2>
+<div class="codehilite"><pre><span></span><code><span class="nx">By</span><span class="w"> </span><span class="k">default</span><span class="p">,</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">NUL</span><span class="o">-</span><span class="nx">terminated</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nx">pointed</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">by</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="k">is</span>
+<span class="nx">considered</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">be</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">text</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">an</span><span class="w"> </span><span class="nx">entire</span><span class="w"> </span><span class="nx">line</span><span class="p">,</span><span class="w"> </span><span class="nx">minus</span><span class="w"> </span><span class="nx">any</span><span class="w"> </span><span class="nx">terminating</span>
+<span class="nx">newline</span><span class="p">.</span><span class="w"> </span><span class="nx">The</span><span class="w"> </span><span class="nx">eflags</span><span class="w"> </span><span class="nx">argument</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">bitwise</span><span class="w"> </span><span class="nx">OR</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">zero</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="nx">more</span><span class="w"> </span><span class="nx">of</span>
+<span class="nx">the</span><span class="w"> </span><span class="nx">following</span><span class="w"> </span><span class="nx">flags</span><span class="p">:</span>
+
+<span class="nx">REG_NOTBOL</span><span class="w">    </span><span class="nx">The</span><span class="w"> </span><span class="nx">first</span><span class="w"> </span><span class="nx">character</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">beginning</span>
+<span class="w">              </span><span class="nx">of</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">line</span><span class="p">,</span><span class="w"> </span><span class="nx">so</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="nx">anchor</span><span class="w"> </span><span class="nx">should</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="k">match</span><span class="w"> </span><span class="nx">before</span>
+<span class="w">              </span><span class="nx">it</span><span class="p">.</span><span class="w"> </span><span class="nx">This</span><span class="w"> </span><span class="nx">does</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="nx">affect</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">behavior</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">newlines</span>
+<span class="w">              </span><span class="nx">under</span><span class="w"> </span><span class="nx">REG_NEWLINE</span><span class="p">.</span>
+
+<span class="nx">REG_NOTEOL</span><span class="w">    </span><span class="nx">The</span><span class="w"> </span><span class="nx">NUL</span><span class="w"> </span><span class="nx">terminating</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nx">does</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="nx">end</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">line</span><span class="p">,</span>
+<span class="w">              </span><span class="nx">so</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="err">$</span><span class="w"> </span><span class="nx">anchor</span><span class="w"> </span><span class="nx">should</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="k">match</span><span class="w"> </span><span class="nx">before</span><span class="w"> </span><span class="nx">it</span><span class="p">.</span><span class="w"> </span><span class="nx">This</span><span class="w"> </span><span class="nx">does</span>
+<span class="w">              </span><span class="k">not</span><span class="w"> </span><span class="nx">affect</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">behavior</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">newlines</span><span class="w"> </span><span class="nx">under</span><span class="w"> </span><span class="nx">REG_NEWLINE</span><span class="p">.</span>
+
+<span class="nx">REG_STARTEND</span><span class="w">  </span><span class="nx">The</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">considered</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">start</span><span class="w"> </span><span class="nx">at</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">+</span>
+<span class="w">              </span><span class="nx">pmatch</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">rm_so</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">have</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">terminating</span><span class="w"> </span><span class="nx">NUL</span><span class="w"> </span><span class="nx">located</span><span class="w"> </span><span class="nx">at</span><span class="w"> </span><span class="kt">string</span>
+<span class="w">              </span><span class="o">+</span><span class="w"> </span><span class="nx">pmatch</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">rm_eo</span><span class="w"> </span><span class="p">(</span><span class="nx">there</span><span class="w"> </span><span class="nx">need</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="nx">actually</span><span class="w"> </span><span class="nx">be</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">NUL</span>
+<span class="w">              </span><span class="nx">at</span><span class="w"> </span><span class="nx">that</span><span class="w"> </span><span class="nx">location</span><span class="p">),</span><span class="w"> </span><span class="nx">regardless</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">nmatch</span><span class="p">.</span>
+<span class="w">              </span><span class="nx">See</span><span class="w"> </span><span class="nx">below</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">definition</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">pmatch</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nx">nmatch</span><span class="p">.</span><span class="w"> </span><span class="nx">This</span>
+<span class="w">              </span><span class="k">is</span><span class="w"> </span><span class="nx">an</span><span class="w"> </span><span class="nx">extension</span><span class="p">,</span><span class="w"> </span><span class="nx">compatible</span><span class="w"> </span><span class="nx">with</span><span class="w"> </span><span class="nx">but</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="nx">specified</span><span class="w"> </span><span class="nx">by</span>
+<span class="w">              </span><span class="nx">IEEE</span><span class="w"> </span><span class="nx">Std</span><span class="w"> </span><span class="m m-Double">1003.2</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nx">POSIX</span><span class="m m-Double">.2</span><span class="w"> </span><span class="p">),</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nx">should</span><span class="w"> </span><span class="nx">be</span><span class="w"> </span><span class="nx">used</span><span class="w"> </span><span class="nx">with</span>
+<span class="w">              </span><span class="nx">caution</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">software</span><span class="w"> </span><span class="nx">intended</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">be</span><span class="w"> </span><span class="nx">portable</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">other</span>
+<span class="w">              </span><span class="nx">systems</span><span class="p">.</span><span class="w"> </span><span class="nx">Note</span><span class="w"> </span><span class="nx">that</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">non</span><span class="o">-</span><span class="nx">zero</span><span class="w"> </span><span class="nx">rm_so</span><span class="w"> </span><span class="nx">does</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="nx">imply</span>
+<span class="w">              </span><span class="nx">REG_NOTBOL</span><span class="p">;</span><span class="w"> </span><span class="nx">REG_STARTEND</span><span class="w"> </span><span class="nx">affects</span><span class="w"> </span><span class="nx">only</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">location</span><span class="w"> </span><span class="nx">of</span>
+<span class="w">              </span><span class="nx">the</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="nx">how</span><span class="w"> </span><span class="nx">it</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">matched</span><span class="p">.</span>
+
+<span class="nx">If</span><span class="w"> </span><span class="nx">REG_NOSUB</span><span class="w"> </span><span class="nx">was</span><span class="w"> </span><span class="nx">specified</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">compilation</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">RE</span><span class="p">,</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">nmatch</span>
+<span class="k">is</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nx">regexec</span><span class="p">()</span><span class="w"> </span><span class="nx">ignores</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">pmatch</span><span class="w"> </span><span class="nx">argument</span><span class="w"> </span><span class="p">(</span><span class="nx">but</span><span class="w"> </span><span class="nx">see</span><span class="w"> </span><span class="nx">below</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">the</span>
+<span class="k">case</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="nx">REG_STARTEND</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">specified</span><span class="p">).</span><span class="w"> </span><span class="nx">Otherwise</span><span class="p">,</span><span class="w"> </span><span class="nx">pmatch</span><span class="w"> </span><span class="nx">points</span><span class="w"> </span><span class="nx">to</span>
+<span class="nx">an</span><span class="w"> </span><span class="nx">array</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">nmatch</span><span class="w"> </span><span class="nx">structures</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="k">type</span><span class="w"> </span><span class="nx">regmatch_t</span><span class="p">.</span><span class="w"> </span><span class="nx">Such</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">structure</span>
+<span class="nx">has</span><span class="w"> </span><span class="nx">at</span><span class="w"> </span><span class="nx">least</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">members</span><span class="w"> </span><span class="nx">rm_so</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nx">rm_eo</span><span class="p">,</span><span class="w"> </span><span class="nx">both</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="k">type</span><span class="w"> </span><span class="nx">regoff_t</span><span class="w"> </span><span class="p">(</span><span class="nx">a</span>
+<span class="nx">signed</span><span class="w"> </span><span class="nx">arithmetic</span><span class="w"> </span><span class="k">type</span><span class="w"> </span><span class="nx">at</span><span class="w"> </span><span class="nx">least</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nx">large</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nx">an</span><span class="w"> </span><span class="nx">off_t</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">ssize_t</span><span class="p">),</span>
+<span class="nx">containing</span><span class="w"> </span><span class="nx">respectively</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">offset</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">first</span><span class="w"> </span><span class="nx">character</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">a</span>
+<span class="nx">substring</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">offset</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">first</span><span class="w"> </span><span class="nx">character</span><span class="w"> </span><span class="nx">after</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">end</span><span class="w"> </span><span class="nx">of</span>
+<span class="nx">the</span><span class="w"> </span><span class="nx">substring</span><span class="p">.</span><span class="w"> </span><span class="nx">Offsets</span><span class="w"> </span><span class="nx">are</span><span class="w"> </span><span class="nx">measured</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">beginning</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="kt">string</span>
+<span class="nx">argument</span><span class="w"> </span><span class="nx">given</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">regexec</span><span class="p">().</span><span class="w"> </span><span class="nx">An</span><span class="w"> </span><span class="nx">empty</span><span class="w"> </span><span class="nx">substring</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">denoted</span><span class="w"> </span><span class="nx">by</span><span class="w"> </span><span class="nx">equal</span>
+<span class="nx">offsets</span><span class="p">,</span><span class="w"> </span><span class="nx">both</span><span class="w"> </span><span class="nx">indicating</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">character</span><span class="w"> </span><span class="nx">following</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">empty</span><span class="w"> </span><span class="nx">substring</span><span class="p">.</span>
+
+<span class="nx">The</span><span class="w"> </span><span class="mi">0</span><span class="nx">th</span><span class="w"> </span><span class="nx">member</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">pmatch</span><span class="w"> </span><span class="nx">array</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">filled</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">indicate</span><span class="w"> </span><span class="nx">what</span>
+<span class="nx">substring</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nx">was</span><span class="w"> </span><span class="nx">matched</span><span class="w"> </span><span class="nx">by</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">entire</span><span class="w"> </span><span class="nx">RE</span><span class="p">.</span><span class="w"> </span><span class="nx">Remaining</span><span class="w"> </span><span class="nx">members</span>
+<span class="nx">report</span><span class="w"> </span><span class="nx">what</span><span class="w"> </span><span class="nx">substring</span><span class="w"> </span><span class="nx">was</span><span class="w"> </span><span class="nx">matched</span><span class="w"> </span><span class="nx">by</span><span class="w"> </span><span class="nx">parenthesized</span><span class="w"> </span><span class="nx">subexpressions</span>
+<span class="nx">within</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">RE</span><span class="p">;</span><span class="w"> </span><span class="nx">member</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="nx">reports</span><span class="w"> </span><span class="nx">subexpression</span><span class="w"> </span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="nx">with</span><span class="w"> </span><span class="nx">subexpressions</span>
+<span class="nx">counted</span><span class="w"> </span><span class="p">(</span><span class="nx">starting</span><span class="w"> </span><span class="nx">at</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="nx">by</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">order</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">their</span><span class="w"> </span><span class="nx">opening</span><span class="w"> </span><span class="nx">parentheses</span><span class="w"> </span><span class="k">in</span>
+<span class="nx">the</span><span class="w"> </span><span class="nx">RE</span><span class="p">,</span><span class="w"> </span><span class="nx">left</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">right</span><span class="p">.</span><span class="w"> </span><span class="nx">Unused</span><span class="w"> </span><span class="nx">entries</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">array</span><span class="w"> </span><span class="p">(</span><span class="nx">corresponding</span>
+<span class="nx">either</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">subexpressions</span><span class="w"> </span><span class="nx">that</span><span class="w"> </span><span class="nx">did</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="nx">participate</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="k">match</span><span class="w"> </span><span class="nx">at</span>
+<span class="nx">all</span><span class="p">,</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">subexpressions</span><span class="w"> </span><span class="nx">that</span><span class="w"> </span><span class="nx">do</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="nx">exist</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">RE</span><span class="w"> </span><span class="p">(</span><span class="nx">that</span><span class="w"> </span><span class="k">is</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="p">&gt;</span>
+<span class="nx">preg</span><span class="o">-&gt;</span><span class="nx">re_nsub</span><span class="p">))</span><span class="w"> </span><span class="nx">have</span><span class="w"> </span><span class="nx">both</span><span class="w"> </span><span class="nx">rm_so</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nx">rm_eo</span><span class="w"> </span><span class="nx">set</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="w"> </span><span class="nx">If</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">subexpression</span>
+<span class="nx">participated</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="k">match</span><span class="w"> </span><span class="nx">several</span><span class="w"> </span><span class="nx">times</span><span class="p">,</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">reported</span><span class="w"> </span><span class="nx">substring</span>
+<span class="k">is</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">last</span><span class="w"> </span><span class="nx">one</span><span class="w"> </span><span class="nx">it</span><span class="w"> </span><span class="nx">matched</span><span class="p">.</span><span class="w"> </span><span class="p">(</span><span class="nx">Note</span><span class="p">,</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nx">an</span><span class="w"> </span><span class="nx">example</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">particular</span><span class="w"> </span><span class="p">,</span>
+<span class="nx">that</span><span class="w"> </span><span class="nx">when</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">RE</span><span class="w"> </span><span class="p">(</span><span class="nx">b</span><span class="o">*</span><span class="p">)</span><span class="o">+</span><span class="w"> </span><span class="nx">matches</span><span class="w"> </span><span class="nx">bbb</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">parenthesized</span>
+<span class="nx">subexpression</span><span class="w"> </span><span class="nx">matches</span><span class="w"> </span><span class="nx">each</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">three</span><span class="w"> </span><span class="nx">b</span><span class="err">&#39;</span><span class="nx">s</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="nx">an</span><span class="w"> </span><span class="nx">infinite</span>
+<span class="nx">number</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">empty</span><span class="w"> </span><span class="nx">strings</span><span class="w"> </span><span class="nx">following</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">last</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="nx">so</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">reported</span>
+<span class="nx">substring</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">one</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">empties</span><span class="p">.)</span>
+
+<span class="nx">If</span><span class="w"> </span><span class="nx">REG_STARTEND</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">specified</span><span class="p">,</span><span class="w"> </span><span class="nx">pmatch</span><span class="w"> </span><span class="nx">must</span><span class="w"> </span><span class="nx">point</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">at</span><span class="w"> </span><span class="nx">least</span><span class="w"> </span><span class="nx">one</span>
+<span class="nx">regmatch_t</span><span class="w"> </span><span class="p">(</span><span class="nx">even</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">nmatch</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="nx">REG_NOSUB</span><span class="w"> </span><span class="nx">was</span><span class="w"> </span><span class="nx">specified</span><span class="p">),</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">hold</span>
+<span class="nx">the</span><span class="w"> </span><span class="nx">input</span><span class="w"> </span><span class="nx">offsets</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">REG_STARTEND</span><span class="p">.</span><span class="w"> </span><span class="nx">Use</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">output</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">still</span><span class="w"> </span><span class="nx">entirely</span>
+<span class="nx">controlled</span><span class="w"> </span><span class="nx">by</span><span class="w"> </span><span class="nx">nmatch</span><span class="p">;</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">nmatch</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="nx">REG_NOSUB</span><span class="w"> </span><span class="nx">was</span><span class="w"> </span><span class="nx">specified</span><span class="p">,</span>
+<span class="nx">the</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">pmatch</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="nx">will</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="nx">be</span><span class="w"> </span><span class="nx">changed</span><span class="w"> </span><span class="nx">by</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">successful</span><span class="w"> </span><span class="nx">regexec</span><span class="p">().</span>
+
+<span class="nx">The</span><span class="w"> </span><span class="nx">regerror</span><span class="p">()</span><span class="w"> </span><span class="nx">function</span><span class="w"> </span><span class="nx">maps</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">non</span><span class="o">-</span><span class="nx">zero</span><span class="w"> </span><span class="nx">errcode</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">either</span>
+<span class="nx">regcomp</span><span class="p">()</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="nx">regexec</span><span class="p">()</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">human</span><span class="o">-</span><span class="nx">readable</span><span class="p">,</span><span class="w"> </span><span class="nx">printable</span><span class="w"> </span><span class="nx">message</span><span class="p">.</span>
+<span class="nx">If</span><span class="w"> </span><span class="nx">preg</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">non</span><span class="o">-</span><span class="nx">NULL</span><span class="p">,</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">error</span><span class="w"> </span><span class="nx">code</span><span class="w"> </span><span class="nx">should</span><span class="w"> </span><span class="nx">have</span><span class="w"> </span><span class="nx">arisen</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">use</span><span class="w"> </span><span class="nx">of</span>
+<span class="nx">the</span><span class="w"> </span><span class="nx">regex_t</span><span class="w"> </span><span class="nx">pointed</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">by</span><span class="w"> </span><span class="nx">preg</span><span class="p">,</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">error</span><span class="w"> </span><span class="nx">code</span><span class="w"> </span><span class="nx">came</span><span class="w"> </span><span class="nx">from</span>
+<span class="nx">regcomp</span><span class="p">(),</span><span class="w"> </span><span class="nx">it</span><span class="w"> </span><span class="nx">should</span><span class="w"> </span><span class="nx">have</span><span class="w"> </span><span class="nx">been</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">most</span><span class="w"> </span><span class="nx">recent</span>
+<span class="nx">regcomp</span><span class="p">()</span><span class="w"> </span><span class="nx">using</span><span class="w"> </span><span class="nx">that</span><span class="w"> </span><span class="nx">regex_t</span><span class="p">.</span><span class="w"> </span><span class="nx">The</span><span class="w"> </span><span class="p">(</span><span class="nx">regerror</span><span class="p">()</span><span class="w"> </span><span class="nx">may</span><span class="w"> </span><span class="nx">be</span><span class="w"> </span><span class="nx">able</span><span class="w"> </span><span class="nx">to</span>
+<span class="nx">supply</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">more</span><span class="w"> </span><span class="nx">detailed</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="nx">using</span><span class="w"> </span><span class="nx">information</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">regex_t</span><span class="p">.)</span>
+<span class="nx">The</span><span class="w"> </span><span class="nx">regerror</span><span class="p">()</span><span class="w"> </span><span class="nx">function</span><span class="w"> </span><span class="nx">places</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">NUL</span><span class="o">-</span><span class="nx">terminated</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="nx">into</span><span class="w"> </span><span class="nx">the</span>
+<span class="nx">buffer</span><span class="w"> </span><span class="nx">pointed</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">by</span><span class="w"> </span><span class="nx">errbuf</span><span class="p">,</span><span class="w"> </span><span class="nx">limiting</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">length</span><span class="w"> </span><span class="p">(</span><span class="nx">including</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">NUL</span><span class="p">)</span>
+<span class="nx">to</span><span class="w"> </span><span class="nx">at</span><span class="w"> </span><span class="nx">most</span><span class="w"> </span><span class="nx">errbuf_size</span><span class="w"> </span><span class="nx">bytes</span><span class="p">.</span><span class="w"> </span><span class="nx">If</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">whole</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="nx">will</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="nx">fit</span><span class="p">,</span>
+<span class="k">as</span><span class="w"> </span><span class="nx">much</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">it</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nx">will</span><span class="w"> </span><span class="nx">fit</span><span class="w"> </span><span class="nx">before</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">terminating</span><span class="w"> </span><span class="nx">NUL</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">supplied</span><span class="p">.</span>
+<span class="nx">In</span><span class="w"> </span><span class="nx">any</span><span class="w"> </span><span class="k">case</span><span class="p">,</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="k">returned</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">size</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">buffer</span><span class="w"> </span><span class="nx">needed</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">hold</span>
+<span class="nx">the</span><span class="w"> </span><span class="nx">whole</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="p">(</span><span class="nx">including</span><span class="w"> </span><span class="nx">terminating</span><span class="w"> </span><span class="nx">NUL</span><span class="p">).</span><span class="w"> </span><span class="nx">If</span><span class="w"> </span><span class="nx">errbuf_size</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="nx">errbuf</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">ignored</span><span class="w"> </span><span class="nx">but</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">still</span><span class="w"> </span><span class="nx">correct</span><span class="p">.</span>
+
+<span class="nx">The</span><span class="w"> </span><span class="nx">regfree</span><span class="p">()</span><span class="w"> </span><span class="nx">function</span><span class="w"> </span><span class="nx">frees</span><span class="w"> </span><span class="nx">any</span><span class="w"> </span><span class="nx">dynamically</span><span class="o">-</span><span class="nx">allocated</span><span class="w"> </span><span class="nx">storage</span>
+<span class="nx">associated</span><span class="w"> </span><span class="nx">with</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">compiled</span><span class="w"> </span><span class="nx">RE</span><span class="w"> </span><span class="nx">pointed</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">by</span><span class="w"> </span><span class="nx">preg</span><span class="p">.</span><span class="w"> </span><span class="nx">The</span><span class="w"> </span><span class="nx">remaining</span>
+<span class="nx">regex_t</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">no</span><span class="w"> </span><span class="nx">longer</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">valid</span><span class="w"> </span><span class="nx">compiled</span><span class="w"> </span><span class="nx">RE</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">effect</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">supplying</span>
+<span class="nx">it</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">regexec</span><span class="p">()</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="nx">regerror</span><span class="p">()</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">undefined</span><span class="p">.</span>
+
+<span class="nx">None</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">these</span><span class="w"> </span><span class="nx">functions</span><span class="w"> </span><span class="nx">references</span><span class="w"> </span><span class="nx">global</span><span class="w"> </span><span class="nx">variables</span><span class="w"> </span><span class="nx">except</span><span class="w"> </span><span class="k">for</span>
+<span class="nx">tables</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">constants</span><span class="p">;</span><span class="w"> </span><span class="nx">all</span><span class="w"> </span><span class="nx">are</span><span class="w"> </span><span class="nx">safe</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">use</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">multiple</span><span class="w"> </span><span class="nx">threads</span><span class="w"> </span><span class="k">if</span>
+<span class="nx">the</span><span class="w"> </span><span class="nx">arguments</span><span class="w"> </span><span class="nx">are</span><span class="w"> </span><span class="nx">safe</span><span class="p">.</span>
+</code></pre></div>
+
+<h2 id="implementation-choices">IMPLEMENTATION CHOICES</h2>
+<div class="codehilite"><pre><span></span><code>RE_DUP_MAX, the limit on repetition counts in bounded repetitions,
+is 255.
+
+A repetition operator ( ? , * , + , or bounds) cannot
+follow another repetition operator. A repetition operator cannot
+begin an expression or subexpression or follow ^ or | .
+
+| cannot appear first or last in a (sub)expression or after
+another | , i.e., an operand of | cannot be an empty sub
+expression. An empty parenthesized subexpression, () , is legal
+and matches an empty (sub)string. An empty string is not a legal RE.
+
+A { followed by a digit is considered the beginning of bounds for
+a bounded repetition, which must then follow the syntax for bounds. A
+{ not followed by a digit is considered an ordinary character.
+
+^ and $ beginning and ending subexpressions in obsolete
+( basic ) REs are anchors, not ordinary characters.
+</code></pre></div>
+
+<h2 id="unit-test">UNIT TEST</h2>
+<div class="codehilite"><pre><span></span><code><span class="nx">The</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="nx">program</span><span class="w"> </span><span class="nx">test_suite_M_regex</span><span class="w"> </span><span class="nx">may</span><span class="w"> </span><span class="nx">be</span><span class="w"> </span><span class="nx">run</span><span class="w"> </span><span class="nx">via</span><span class="w"> </span><span class="s">&quot;fpm test&quot;</span>
+<span class="k">or</span><span class="w"> </span><span class="nx">when</span><span class="w"> </span><span class="nx">M_regex</span><span class="p">(</span><span class="mi">3</span><span class="nx">f</span><span class="p">)</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">built</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nx">part</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">GPF</span><span class="w"> </span><span class="p">(</span><span class="nx">General</span><span class="w"> </span><span class="nx">Purpose</span>
+<span class="nx">Fortran</span><span class="w"> </span><span class="kn">library</span><span class="p">)</span><span class="w"> </span><span class="nx">but</span><span class="w"> </span><span class="nx">requires</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="nx">framework</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">GPF</span><span class="w"> </span><span class="nx">so</span><span class="w"> </span><span class="nx">it</span>
+<span class="nx">cannot</span><span class="w"> </span><span class="nx">be</span><span class="w"> </span><span class="nx">run</span><span class="w"> </span><span class="nx">stand</span><span class="o">-</span><span class="nx">alone</span><span class="p">.</span>
+</code></pre></div>
+
+<h2 id="see-also">SEE ALSO</h2>
+<div class="codehilite"><pre><span></span><code><span class="nx">Regular</span><span class="w"> </span><span class="nx">Expression</span><span class="w"> </span><span class="nx">Notation</span><span class="p">,</span><span class="w"> </span><span class="nx">IEEE</span><span class="w"> </span><span class="nx">Std</span><span class="p">,</span><span class="w"> </span><span class="m m-Double">1003.2</span><span class="p">,</span><span class="w"> </span><span class="nx">section</span><span class="w"> </span><span class="m m-Double">2.8</span><span class="p">.</span>
+
+<span class="nx">grep</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="nx">re_format</span><span class="p">(</span><span class="mi">7</span><span class="p">),</span><span class="w"> </span><span class="nx">regex</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="nx">These</span><span class="w"> </span><span class="nx">routines</span><span class="w"> </span><span class="nx">implement</span><span class="w"> </span><span class="nx">IEEE</span><span class="w"> </span><span class="nx">Std</span><span class="w"> </span><span class="m m-Double">1003.2</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;POSIX.2&quot;</span><span class="p">)</span><span class="w"> </span><span class="nx">regular</span><span class="w"> </span><span class="nx">expressions</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;RE&quot;</span><span class="nx">s</span><span class="p">);</span><span class="w"> </span><span class="nx">see</span><span class="w"> </span><span class="nx">re_format</span><span class="p">(</span><span class="mi">7</span><span class="p">).</span>
+
+<span class="nx">IEEE</span><span class="w"> </span><span class="nx">Std</span><span class="w"> </span><span class="m m-Double">1003.2</span><span class="w"> </span><span class="p">(</span><span class="nx">POSIX</span><span class="m m-Double">.2</span><span class="p">),</span><span class="w"> </span><span class="nx">sections</span><span class="w"> </span><span class="m m-Double">2.8</span><span class="w"> </span><span class="p">(</span><span class="nx">Regular</span><span class="w"> </span><span class="nx">Expression</span><span class="w"> </span><span class="nx">Notation</span><span class="p">)</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="nx">B</span><span class="m m-Double">.5</span><span class="w"> </span><span class="p">(</span><span class="nx">C</span><span class="w"> </span><span class="nx">Binding</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">Regular</span><span class="w"> </span><span class="nx">Expression</span><span class="w"> </span><span class="nx">Matching</span><span class="p">).</span>
+
+<span class="w"> </span><span class="nx">regcomp</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="nx">p</span><span class="p">)</span><span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="nx">regular</span><span class="w"> </span><span class="nx">expression</span><span class="w"> </span><span class="nx">matching</span>
+<span class="w"> </span><span class="nx">regex</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="w">     </span><span class="o">-</span><span class="w"> </span><span class="nx">regular</span><span class="o">-</span><span class="nx">expression</span><span class="w"> </span><span class="kn">library</span>
+<span class="w"> </span><span class="nx">regex</span><span class="w"> </span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="w">     </span><span class="o">-</span><span class="w"> </span><span class="nx">POSIX</span><span class="w"> </span><span class="m m-Double">1003.2</span><span class="w"> </span><span class="nx">regular</span><span class="w"> </span><span class="nx">expressions</span>
+<span class="w"> </span><span class="nx">regex</span><span class="p">.</span><span class="nx">h</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="nx">p</span><span class="p">)</span><span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="nx">regular</span><span class="w"> </span><span class="nx">expression</span><span class="w"> </span><span class="nx">matching</span><span class="w"> </span><span class="nx">types</span>
+<span class="w"> </span><span class="nx">regexp</span><span class="w"> </span><span class="p">(</span><span class="nx">n</span><span class="p">)</span><span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="nx">Match</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">regular</span><span class="w"> </span><span class="nx">expression</span><span class="w"> </span><span class="nx">against</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="kt">string</span>
+<span class="w"> </span><span class="nx">regsub</span><span class="w"> </span><span class="p">(</span><span class="nx">n</span><span class="p">)</span><span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="nx">Perform</span><span class="w"> </span><span class="nx">substitutions</span><span class="w"> </span><span class="nx">based</span><span class="w"> </span><span class="nx">on</span><span class="w"> </span><span class="nx">regular</span><span class="w"> </span><span class="nx">expression</span><span class="w"> </span><span class="nx">pattern</span><span class="w"> </span><span class="nx">matching</span>
+</code></pre></div>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='http://fortranwiki.org/fortran/show/iso_fortran_env'>iso_fortran_env</a></li>
+                  <li class="list-inline-item"><a href='http://fortranwiki.org/fortran/show/iso_c_binding'>iso_c_binding</a></li>
+              </ul>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      
+      <br>
+
+
+
+
+
+
+        <section>
+          <h2>Derived Types</h2>
+              <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="type-regex_type"></span>
+      <h3>
+        type, public&nbsp;::&nbsp;
+        <a href='../type/regex_type.html'>regex_type</a>
+        
+      </h3>
+    </div>
+    <div class="card-body">
+      
+
+        <h4>Components</h4>
+          <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Visibility</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-preg"></span>
+              type(C_ptr),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>preg</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+        <section>
+          <h2>Functions</h2>
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-regerror"></span> <h3>public  function <a href='../proc/regerror.html'>regerror</a>(this, errcode) result(errmsg)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Sample program</p><a href="../proc/regerror.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-this~3"></span>
+              type(<a href='../type/regex_type.html'>regex_type</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>this</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-errcode"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>errcode</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>character(len=:), allocatable</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-regexec"></span> <h3>public  function <a href='../proc/regexec.html'>regexec</a>(this, string, matches, flags, status) result(match)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Sample program</p><a href="../proc/regexec.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-this~2"></span>
+              type(<a href='../type/regex_type.html'>regex_type</a>),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>this</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-string~2"></span>
+              character(len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>string</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-matches~7"></span>
+              integer,
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>matches</strong>(:,:)</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-flags~3"></span>
+              character(len=*),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>flags</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-status~3"></span>
+              integer,
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>status</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>logical</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-regmatch"></span> <h3>public  function <a href='../proc/regmatch.html'>regmatch</a>(match, string, matches)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>function regmatch(match,string,matches)</p><a href="../proc/regmatch.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-match~8"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>match</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-string~4"></span>
+              character(len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>string</strong></td>
+            <td>
+<p>character(len=matches(2,match)-matches(1,match)+1) :: regmatch  ! intel internal compiler error version 19</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-matches~9"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>matches</strong>(2,*)</td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    <h4>
+    Return Value
+    <small>character(len=:), allocatable</small>
+    </h4>
+    
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+        <section>
+          <h2>Subroutines</h2>
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-regcomp"></span> <h3>public  subroutine <a href='../proc/regcomp.html'>regcomp</a>(this, pattern, flags, nmatch, status)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Sample program</p><a href="../proc/regcomp.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-this"></span>
+              type(<a href='../type/regex_type.html'>regex_type</a>),
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>this</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-pattern"></span>
+              character(len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>pattern</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-flags"></span>
+              character(len=*),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>flags</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nmatch"></span>
+              integer,
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nmatch</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-status"></span>
+              integer,
+            </td>
+<td>intent(out),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>status</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-regfree"></span> <h3>public  subroutine <a href='../proc/regfree.html'>regfree</a>(this)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>regfree(3f) frees any dynamically-allocated storage used by the
+   internal form of an RE.</p><a href="../proc/regfree.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-this~4"></span>
+              type(<a href='../type/regex_type.html'>regex_type</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>this</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-regsub"></span> <h3>public  subroutine <a href='../proc/regsub.html'>regsub</a>(matchline, matches, source, dest)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>subroutine regsub(matchline, matches, source, dest)</p><a href="../proc/regsub.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-matchline"></span>
+              character(len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>matchline</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-matches~10"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>matches</strong>(:,:)</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-source"></span>
+              character(len=*),
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>source</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-dest"></span>
+              character(len=:),
+            </td>
+<td>intent(out),</td>
+              <td></td>            <td>
+              allocatable
+            </td>
+            <td>::</td>
+            <td><strong>dest</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col"><p>M_regex was developed by John S. Urban<br>&copy; 2024 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-03-29 03:43              </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>
