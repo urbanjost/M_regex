@@ -7,7 +7,7 @@ output_dir: docs/fpm-ford
 project: M_regex
 summary: Fortran interface to POSIX 1003.2 regular expression library
 project_github: https://github.com/urbanjost/M_regex
-project_download:
+project_download: https://github.com/urbanjost/M_regex/archive/refs/heads/master.zip
 author: John S. Urban
 author_email: urbanjost@comcast.net
 github: https://github.com/urbanjost/M_regex
